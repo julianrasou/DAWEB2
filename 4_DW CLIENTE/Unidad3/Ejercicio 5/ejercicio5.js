@@ -1,4 +1,3 @@
-// . isInteger()
 function calcular(){
     
     input = parseInt(document.getElementById("input").value);
