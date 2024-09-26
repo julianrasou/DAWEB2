@@ -1,5 +1,22 @@
-// Apartado a
-// setTimeout(function(){document.getElementById("resultado").innerHTML += `${new Date().getDay()} / ${new Date().getMonth()}`}, 2000)
+// setTimeout()
+function time(){
+    setTimeout(fecha,2000);
+}
+time();
+function fecha(){
+    let fecha=new Date();
+    document.getElementById("resultado").innerHTML += `${fecha}`;
+};
 
-let intervalo = setInterval(function(){document.getElementById("resultado").innerHTML += `${new Date().getDay()} / ${new Date().getMonth()}`}, 2000)
-clearInterval(intervalo)
+
+// setInterval()
+let intervalo = setInterval(fecha,2000);
+function intervalos(){
+    intervalo;
+}
+intervalos();
+function fecha(){
+    let fecha = new Date();
+    document.getElementById("resultado").innerHTML += `${fecha}`;
+    clearInterval(intervalo);
+}
