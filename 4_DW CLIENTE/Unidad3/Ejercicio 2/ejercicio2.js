@@ -8,7 +8,7 @@ function domingo(){
 
         let fecha = new Date(`${i}-${mes}-${dia}`)
         if(fecha.getDay() == 0){
-            document.getElementById("resultado").innerHTML += `En el año ${i} tu cumpleaños cae en domindo.. <br/>`;
+            document.getElementById("resultado").innerHTML += `En el año ${i} tu cumpleaños cae en domingo. <br/>`;
         }
     }
 
