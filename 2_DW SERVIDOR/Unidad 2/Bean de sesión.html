@@ -1,0 +1,31 @@
+
+<!-- saved from url=(0128)https://www.edu.xunta.gal/centros/iesfernandowirtz/aulavirtual/pluginfile.php/233210/mod_resource/content/0/Ejemplo_HTMLJava.jsp -->
+<html class=" dpmeaac"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>&lt;%@page contentType="text/html" pageEncoding="ISO-8859-1"%&gt;
+<jsp:usebean id="p" scope="session" class="persona.Persona">
+
+&lt;% 
+   //Ejemplo de Script JSP, este fragmento de código es JAVA
+   String nombreAux; 
+   nombreAux = Eva;
+   int edadAux;
+   edadAux = 5; %&gt;
+
+
+
+
+
+    
+        
+        <title>Bean de sesión</title>
+        
+        <p>El nombre es &lt;%=p.getNombre()%&gt; y la edad es &lt;%=p.getEdad()%&gt; años.</p> 
+            
+        <p>Recuperamos los valores del request</p>    
+        <p>Estos son los valores introducidos en el formulario:
+           El nombre es &lt;%=nombreAux%&gt; y la edad es &lt;%=edadAux%&gt; años. </p>
+        
+    
+    
+       
+    
+</jsp:usebean></body></html>
