@@ -1,8 +1,13 @@
 var miVentana;
 var intervalo;
+posX = 50;
+posY = 50;
+let velocidadX = 3;
+let velocidadY = 3;
+
 function crearVentana(){
 
-    miVentana = window.open("","","width=500,height=200,top=0,left=0");
+    miVentana = window.open("","","width=500,height=200,top=50,left=50");
     miVentana.document.write("<h3 style=\"text-align: center;\">La ventana que rebota</h3>")
 
     intervalo = setInterval(moverVentana, 10);
@@ -14,34 +19,27 @@ function cerrarVentana(){
     clearInterval(intervalo);
 }
 
+function pararVentana(){
+    clearInterval(intervalo);
+}
+
 function moverVentana(){
-    let velocidadX = 3;
-    let velocidadY = 3;
-    let derecha, abajo;
-    if(miVentana.screenX <= (window.outerWidth-miVentana.outerWidth-100)){
-        derecha = false;
-    }else if(miVentana.screenX <= 100){
-        derecha = true;
+    let pantallaAncho = screen.availWidth;
+    let pantallaAlto = screen.availHeight;
+
+
+    if(((posX+500) >= pantallaAncho) || (posX <= 0)){
+        velocidadX = (-velocidadX);
     }
-    if(miVentana.screenY <= (window.outerHeight-miVentana.outerHeight-100)){
-        abajo = false;
-    }else if(miVentana.screenY <= 100){
-        abajo = true;
+    if(((posY+200) >= pantallaAlto) || (posY <= 0)){
+        velocidadY = (-velocidadY);
     }
 
-    if(derecha){
-        velocidadX = -3;
-    }else{
-        velocidadX = 3;
-    }
-    if(abajo){
-        velocidadY = -3;
-    }else{
-        velocidadY = 3;
-    }
+    posX += velocidadX;
+    posY += velocidadY;
 
-    if(!miVentana.closed){
-        miVentana.moveBy(velocidadY,velocidadX);
-    }
+    miVentana.moveTo(posX, posY);
+
+
 
 }
