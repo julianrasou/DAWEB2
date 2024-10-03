@@ -52,10 +52,27 @@ function borrar(opcion){
 
 function buscarIndice(){
 
-    
+    let resultado;
+    let indice = document.getElementById("indiceApartado5").value;
+    if(indice >= paises.length){
+        resultado = "No se pudo encontrar, no hay tantos países";
+    }else{
+        resultado = `El país con el índice ${indice} es ${paises[indice]}`;
+    }
 
+    document.getElementById("apartado5a").innerHTML = resultado;
 }
 
 function buscarNombre(){
+
+    let resultado;
+    pais = document.getElementById("paisApartado5").value;
+    if(!paises.indexOf(pais)){
+        resultado = "Ese país no está en la lista."
+    }else{
+        resultado = `El país ${pais} está en el índice ${paises.indexOf(pais)}`;
+    }
+
+    document.getElementById("apartado5b").innerHTML = resultado;
 
 }
