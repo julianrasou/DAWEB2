@@ -26,6 +26,38 @@
 
     <!-- Apartado 3. Añadir un país al principio o al final -->
     <h3>Apartado 3</h3>
+    <p>
+        Introduce un país:<br>
+        1- Al principio<br>
+        2- Al final
+    </p>
+    <input type="number" id="inputApartado3"><br>
+    <input type="text" id="pais3">
+    <button onclick="añadir()">Añadir</button>
+    <p id="apartado3"></p>
+
+    <!-- Apartado 4. Borrar un país del principio o del final -->
+    <h3>Apartado 4</h3>
+    <p>
+        Borra un país:
+    </p>
+    <button onclick="borrar(1)">Del principio</button>
+    <button onclick="borrar(2)">Del final</button>
+    <p id="apartado4"></p>
+    
+    <!-- Apartado 5. Consultar país por posición y por nombre -->
+    <h3>Apartado 5</h3>
+    <p>
+        Consultar país por índice:
+    </p>
+    <input type="number" id="indiceApartado5">
+    <button onclick="buscarIndice()">Buscar</button>
+
+    <p>
+        Consultar posición de un país:
+    </p>
+    <input type="text" id="paisApartado5">
+    <button onclick="buscarNombre()">Buscar</button>
 
 </body>
 </html>
