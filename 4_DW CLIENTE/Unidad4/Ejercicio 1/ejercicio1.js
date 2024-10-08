@@ -1,78 +1,13 @@
-let paises = ["Polonia","Alemania","España","Francia","Italia","Portugal"];
+import * as lib from "./libreria.js";
+let paises = ["España", "Francia", "Holanda", "Italia", "Portugal"];
 
-
-function contar(){
-
-    document.getElementById("apartado1").innerHTML = `Hay ${paises.length} países en el array.`
-
-}
-
-function mostrar(){
-
-}
-
-function añadir(){
-
-    let opcion = document.getElementById("inputApartado3").value;
-    let pais = document.getElementById("pais3").value;
-    if(pais == "") return false;
-    let resultado;
-
-    if(opcion == 2){
-        paises.push(pais);
-        resultado = `Se ha añadido el país ${pais} al final.`;
-    }else if(opcion == 1){
-        paises.unshift(pais);
-        resultado = `Se ha añadido el país ${pais} al principio.`
-    }else resultado = "Opción no disponible";
-
-    document.getElementById("apartado3").innerHTML = resultado;
-
-}
-
-function borrar(opcion){
-
-    if(opcion == 1){
-        if(paises.length == 0){
-            resultado = "No se pudo borrar, el array está vacío.";
-        }else{
-            resultado =  `Se eliminó el país ${paises.shift()} del principio.`;
-        }
-    }else{
-        if(paises.length == 0){
-            resultado = "No se pudo borrar, el array está vacío.";
-        }else{
-            resultado =  `Se eliminó el país ${paises.pop()} del final.`;
-        }
-    }
-
-    document.getElementById("apartado4").innerHTML = resultado;
-
-}
-
-function buscarIndice(){
-
-    let resultado;
-    let indice = document.getElementById("indiceApartado5").value;
-    if(indice >= paises.length){
-        resultado = "No se pudo encontrar, no hay tantos países";
-    }else{
-        resultado = `El país con el índice ${indice} es ${paises[indice]}`;
-    }
-
-    document.getElementById("apartado5a").innerHTML = resultado;
-}
-
-function buscarNombre(){
-
-    let resultado;
-    pais = document.getElementById("paisApartado5").value;
-    if(!paises.indexOf(pais)){
-        resultado = "Ese país no está en la lista."
-    }else{
-        resultado = `El país ${pais} está en el índice ${paises.indexOf(pais)}`;
-    }
-
-    document.getElementById("apartado5b").innerHTML = resultado;
-
-}
+document.getElementById("apartado1").innerHTML = `Hay ${lib.contar(paises)} países.`;
+document.getElementById("original").innerHTML = lib.mostrar(paises, 1);
+document.getElementById("reves").innerHTML = lib.mostrar(paises, 2);
+document.getElementById("alfa").innerHTML = lib.mostrar(paises, 3);
+document.getElementById("principio").innerHTML = `Se añadió Fuenlabrada al principio. El nuevo array: ${lib.añadir(paises, 1, "Fuenlabrada")}.`;
+document.getElementById("final").innerHTML = `Se añadió Torremolinos al final. El nuevo array: ${lib.añadir(paises, 2, "Torremolinos")}.`;
+document.getElementById("principio2").innerHTML = `Se eliminó ${lib.borrar(paises, 1)} del principio.`;
+document.getElementById("final2").innerHTML = `Se eliminó ${lib.borrar(paises, 2)} del final.`;
+document.getElementById("apartado5a").innerHTML = `El país con índice 2 es: ${lib.buscarIndice(paises, 2)}.`;
+document.getElementById("apartado5b").innerHTML = `El índice de Francia es: ${lib.buscarNombre(paises, "Francia")}.`;

@@ -4,60 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./ejercicio1.js" defer></script>
+    <script src="./ejercicio1.js" type="module" defer></script>
 </head>
 <body>
     <!-- Apartado 1. Mostrar el número de países -->
     <h3>Apartado 1</h3>
-    <button onclick="contar()">Mostrar número de países</button>
     <p id="apartado1"></p>
     
     <!-- Apartado 2. Mostrar listado de países -->
     <h3>Apartado 2</h3>
     <p>
-        Mostrar lista de países por orden:<br>
+        Muestra lista de países por orden:<br>
         1- Como se han introducido en el array<br>
+        <p id="original"></p>
         2- Del revés<br>
+        <p id="reves"></p>
         3- Por orden alfabético
+        <p id="alfa"></p>
     </p>
-    <input type="number" id="inputApartado2">
-    <button onclick="mostrar()">Mostrar lista de países</button>
-    <p id="apartado2"></p>
 
     <!-- Apartado 3. Añadir un país al principio o al final -->
     <h3>Apartado 3</h3>
     <p>
-        Introduce un país:<br>
+        Introducir un país:<br>
         1- Al principio<br>
+        <p id="principio"></p>
         2- Al final
+        <p id="final"></p>
     </p>
-    <input type="number" id="inputApartado3"><br>
-    <input type="text" id="pais3">
-    <button onclick="añadir()">Añadir</button>
-    <p id="apartado3"></p>
 
     <!-- Apartado 4. Borrar un país del principio o del final -->
     <h3>Apartado 4</h3>
     <p>
-        Borra un país:
+        Borrar un país:
+        1- Del principio
+        <p id="principio2"></p>
+        2- Del final
+        <p id="final2"></p>
     </p>
-    <button onclick="borrar(1)">Del principio</button>
-    <button onclick="borrar(2)">Del final</button>
-    <p id="apartado4"></p>
     
     <!-- Apartado 5. Consultar país por posición y por nombre -->
     <h3>Apartado 5</h3>
     <p>
         Consultar país por índice:
     </p>
-    <input type="number" id="indiceApartado5">
-    <button onclick="buscarIndice()">Buscar</button>
     <p id="apartado5a"></p>
     <p>
         Consultar posición de un país:
     </p>
-    <input type="text" id="paisApartado5">
-    <button onclick="buscarNombre()">Buscar</button>
     <p id="apartado5b"></p>
 
 </body>
