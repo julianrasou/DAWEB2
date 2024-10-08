@@ -68,7 +68,7 @@ if(primo($num)){
 }else echo "$num no es un número primo.<br>";
 
 echo "<h3>Ejercicio 3</h3><br>";
-parPrimo($num);
+parPrimo();
 
 
 

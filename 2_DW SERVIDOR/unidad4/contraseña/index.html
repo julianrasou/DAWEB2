@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de contraseñas</title>
+</head>
+<body>
+    <form action="formulario.php" method="post">
+
+        <p>
+            Mínimo:
+            <input type="number" name="min">
+        </p>
+        <p>
+            Máximo:
+            <input type="number" name="max">
+        </p>
+        <p>
+            Tipo de contraseña:
+            <select name="tipo">
+                <option value="num">Solo números</option>
+                <option value="alfa">Solo letras</option>
+                <option value="alfanum">Números y letras</option>
+            </select>
+        </p>
+        <input type="submit">
+
+    </form>
+</body>
+</html>
