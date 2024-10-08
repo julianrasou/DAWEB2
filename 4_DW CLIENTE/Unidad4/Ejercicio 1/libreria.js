@@ -22,7 +22,7 @@ function mostrar(lista, input){
         lista2.sort();
         return lista2;
 
-    }else return "Opción inválida."
+    }else return false;
 
 }
 
@@ -31,58 +31,69 @@ function añadir(lista, opcion, pais){
     if(pais == "") return false;
 
     if(opcion == 2){
+
         lista.push(pais);
         return lista;
+
     }else if(opcion == 1){
+
         lista.unshift(pais);
         return lista;
-    }else return "Opción inválida.";
+
+    }else return false;
 
 }
 
 function borrar(lista, opcion){
 
     if(opcion == 1){
-        if(lista.length == 0){
-            return false;
-        }else{
-            resultado =  `Se eliminó el país ${lista.shift()} del principio.`;
-        }
-    }else{
-        if(lista.length == 0){
-            return false;
-        }else{
-            resultado =  `Se eliminó el país ${lista.pop()} del final.`;
-        }
-    }
 
-    document.getElementById("apartado4").innerHTML = resultado;
+        if(lista.length == 0){
+            return false;
+        }else{
+            return lista.shift();
+        }
+
+    }else if(opcion == 2){
+
+        if(lista.length == 0){
+            return false;
+        }else{
+            return lista.pop();
+        }
+
+    }
 
 }
 
-function buscarIndice(lista){
+function buscarIndice(lista, indice){
 
-    let resultado;
-    let indice = document.getElementById("indiceApartado5").value;
     if(indice >= lista.length){
-        resultado = "No se pudo encontrar, no hay tantos países";
+
+        return false;
+
     }else{
-        resultado = `El país con el índice ${indice} es ${lista[indice]}`;
+
+        return lista[indice];
+
     }
 
-    document.getElementById("apartado5a").innerHTML = resultado;
 }
 
-function buscarNombre(lista){
+function buscarNombre(lista, elemento){
 
-    let resultado;
-    pais = document.getElementById("paisApartado5").value;
-    if(!lista.indexOf(pais)){
-        resultado = "Ese país no está en la lista."
+    if(!lista.indexOf(elemento)){
+
+        return false;
+
     }else{
-        resultado = `El país ${pais} está en el índice ${lista.indexOf(pais)}`;
+
+        return lista.indexOf(elemento);
+
     }
 
-    document.getElementById("apartado5b").innerHTML = resultado;
-
 }
+
+
+export {contar, mostrar, añadir, borrar, buscarIndice, buscarNombre};
+
