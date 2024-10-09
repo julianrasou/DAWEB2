@@ -15,10 +15,10 @@ let clientes = [new cliente("Laura", "Santander", 50), new cliente("Álvaro", "C
 
 function mostrar() {
     let input = document.getElementById("input").value;
-    let resultado;
+    
     if(input == "1"){
         
-        resultado = `<table border="1"><tr><td>Nombre</td><td>Localidad</td><td>Cuota</td></tr>`;
+        let resultado = `<table border="1"><tr><td>Nombre</td><td>Localidad</td><td>Cuota</td></tr>`;
 
         clientes.forEach(elemento => {
 
@@ -33,11 +33,42 @@ function mostrar() {
 
     }else if(input == "2"){
         
-        
+
+        resultado = `<table border="1"><tr><td>Nombre</td><td>Cuota</td></tr>`;
+        let localidad = prompt("Elige una localidad: Santander, Castro, Zamora, Bilbao");
+
+        clientes.forEach(elemento => {
+
+            if(elemento.localidad === localidad){
+
+                resultado += `<tr><td>${elemento.nombre}</td><td>${elemento.cuota}</td></tr>`;
+
+            }
+
+        });
+
+        resultado += `</table>`;
+
+        document.getElementById("resultado").innerHTML = resultado;
 
     }else if(input == "3"){
         
+        resultado = `<table border="1"><tr><td>Nombre</td><td>Localidad</td></tr>`;
+        let cuota = prompt("Elige una cuota: 30, 40, 50, 60");
         
+        clientes.forEach(elemento => {
+
+            if(elemento.cuota == cuota){
+
+                resultado += `<tr><td>${elemento.nombre}</td><td>${elemento.localidad}</td></tr>`;
+
+            }
+
+        });
+
+        resultado += `</table>`;
+
+        document.getElementById("resultado").innerHTML = resultado;
 
     }
 }
