@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <form action="./formulario.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="archivo"><br/>
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<!--
+
+1. ¿Cuál es la carpeta por defecto en la que almacenan los archivos que llegan al
+servidor?
+
+\xampp\tmp\
+
+2. Nos ofrece PHP información sobre la subida correcta o no de un archivo al servidor.
+
+Sí, la propiedad error del archivo, 0 significa que no hay errores
+
+3. ¿En qué variable superglobal encontramos la información de los ficheros subidos?
+
+$_FILES
+
+4. ¿Podemos subir cualquier tamaño de archivo sin limitaciones?
+
+No, el límite está configurado en php.ini
+
+5. ¿Qué parámetros de configuración intervienen en el envío de datos al servidor desde
+el cliente?
+
+upload_max_filesize
+post_max_size
+max_file_uploads
+file_uploads
+
+
+-->

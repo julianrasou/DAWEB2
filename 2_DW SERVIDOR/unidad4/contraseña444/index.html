@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de contraseñas</title>
+</head>
+<body>
+    <form action="formulario.php" method="post"enctype="multipart/form-data">
+
+        <p>
+            Mínimo:
+            <input type="number" name="min">
+        </p>
+        <p>
+            Máximo:
+            <input type="number" name="max">
+        </p>
+        <p>
+            Tipo de contraseña:
+            <select name="tipo">
+                <option value="num">Solo números</option>
+                <option value="alfa">Solo letras</option>
+                <option value="alfanum">Números y letras</option>
+            </select>
+        </p>
+        <input type="submit">
+
+    </form>
+</body>
+</html>
+
+<!--
+
+1. ¿Qué posibles valores tiene el atributo?
+
+application/x-www-form-urlencoded: Predeterminado
+multipart/form-data: para archivos
+text/plain: sin encriptar
+
+2. ¿Cuál es el valor por defecto?
+
+application/x-www-form-urlencoded
+
+3. ¿Qué valor soporta el envío de archivos adjuntos?
+
+multipart/form-data
+
+4. ¿Qué ocurre si envío un archivo sin utilizar la configuración correcta de enctype?
+
+no se envía
+
+5. ¿Puedo recoger los datos de POST usando text/plain en enctype?
+
+no se recomienda y no se pueden enviar archivos
+
+6. ¿Por qué el valor del atributo no afecta a GET?
+
+porque los datos se envían mediante url y no puede manejar datos binarios
+
+
+
+-->

@@ -13,7 +13,7 @@
     $max = $_POST["max"];
     $tipo = $_POST["tipo"];
 
-    echo generarContraseña($min, $max, $tipo);
+    echo "<p>".generarContraseña($min, $max, $tipo)."</p>";
     ?>
 
     
