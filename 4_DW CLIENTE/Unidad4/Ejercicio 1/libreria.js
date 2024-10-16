@@ -18,9 +18,21 @@ function mostrar(lista, input){
 
     }else if(input == 3){
 
-        let lista2 = lista.slice();
-        lista2.sort();
-        return lista2;
+        if(typeof lista[0] == "object"){
+
+            let lista2 = lista.slice();
+            lista2.sort(function (a,b){
+                return a.nombre.localeCompare(b.nombre);
+            });
+            return lista2;
+
+        }else{
+
+            let lista2 = lista.slice();
+            lista2.sort();
+            return lista2;
+
+        }
 
     }else return false;
 
@@ -82,13 +94,22 @@ function buscarIndice(lista, indice){
 
 function buscarNombre(lista, elemento){
 
-    if(!lista.indexOf(elemento)){
+    if(typeof lista[0] == "object"){
 
-        return false;
-
+        let posicion=lista.findIndex(objeto => objeto.nombre === elemento);
+        return posicion;
+        
     }else{
 
-        return lista.indexOf(elemento);
+        if(!lista.indexOf(elemento)){
+
+            return false;
+
+        }else{
+
+            return lista.indexOf(elemento);
+
+        }
 
     }
 

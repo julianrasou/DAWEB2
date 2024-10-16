@@ -58,7 +58,7 @@ function mostrar() {
         
         clientes.forEach(elemento => {
 
-            if(elemento.cuota == cuota){
+            if(elemento.cuota >= cuota){
 
                 resultado += `<tr><td>${elemento.nombre}</td><td>${elemento.localidad}</td></tr>`;
 
