@@ -13,35 +13,35 @@ class Disco {
 
     }
 
-    set nuevaLocalizacion(loc){
+    set nuevaLocalizacion(loc) {
 
         this.localizacion = loc;
 
     }
 
-    set nuevoPrestado(pre){
+    set nuevoPrestado(pre) {
 
         this.prestado = pre;
 
     }
 
-    get mostrarInfo(){
-        
-        let info = {"nombre":this.nombre,"grupo":this.grupo,"publicacion":this.publicacion,"genero":this.genero,"localizacion":this.localizacion, "prestado":this.prestado, "caratula":this.caratula};
+    get mostrarInfo() {
+
+        let info = { "nombre": this.nombre, "grupo": this.grupo, "publicacion": this.publicacion, "genero": this.genero, "localizacion": this.localizacion, "prestado": this.prestado, "caratula": this.caratula };
         return info;
 
     }
 }
 
 function mostrarDiscos(discos) {
-    
+
     let resultado = "<table border=\"1\">";
     resultado += "<tr><td>Nombre</td><td>Grupo</td><td>Publicación</td><td>Genero</td><td>Localización</td><td>Prestado</td><td>Caratula</td></tr>";
 
     discos.forEach(element => {
-        
+
         resultado += "<tr>";
-        
+
         resultado += `<td>${element["nombre"]}</td>`;
         resultado += `<td>${element["grupo"]}</td>`;
         resultado += `<td>${element["publicacion"]}</td>`;
@@ -66,7 +66,7 @@ function mostrarDisco(disco) {
     resultado += "<tr><td>Nombre</td><td>Grupo</td><td>Publicación</td><td>Genero</td><td>Localización</td><td>Prestado</td><td>Caratula</td></tr>";
 
     resultado += "<tr>";
-        
+
     resultado += `<td>${disco["nombre"]}</td>`;
     resultado += `<td>${disco["grupo"]}</td>`;
     resultado += `<td>${disco["publicacion"]}</td>`;
@@ -81,7 +81,7 @@ function mostrarDisco(disco) {
     resultado += "</table>";
 
     return resultado;
-    
+
 }
 
 function mostrarPorAño(lista, min, max) {
@@ -89,12 +89,12 @@ function mostrarPorAño(lista, min, max) {
     let resultado = "<table border=\"1\">";
     resultado += "<tr><td>Nombre</td><td>Grupo</td><td>Publicación</td><td>Genero</td><td>Localización</td><td>Prestado</td><td>Caratula</td></tr>";
 
-    lista.forEach(disco =>{
+    lista.forEach(disco => {
 
-        if(disco.publicacion>=min && disco.publicacion<=max){
+        if (disco.publicacion >= min && disco.publicacion <= max) {
 
             resultado += "<tr>";
-        
+
             resultado += `<td>${disco["nombre"]}</td>`;
             resultado += `<td>${disco["grupo"]}</td>`;
             resultado += `<td>${disco["publicacion"]}</td>`;
@@ -112,7 +112,7 @@ function mostrarPorAño(lista, min, max) {
     resultado += "</table>";
 
     return resultado;
-    
+
 }
 
 
