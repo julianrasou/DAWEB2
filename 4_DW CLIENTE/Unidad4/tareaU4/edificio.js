@@ -5,7 +5,7 @@ class Edificio {
         this.calle = calle;
         this.numero = num;
         this.codigoPostal = cp;
-        this.plantas = [[]];
+        this.plantas = [];
 
         this.mensajeEdificio(calle, num, cp);
 
@@ -44,22 +44,45 @@ class Edificio {
     }
 
     agregarPlantasYPuertas(numPlantas, numPuertas){
-        // TODO: implementar método
+        
+        let tamaño = this.plantas.length;
+        let nuevasPlantas = tamaño + numPlantas;
+
+        for(let i = tamaño; i < nuevasPlantas; i++){
+
+            this.plantas[i] = [];
+            for(let j = 0; j < numPuertas; j++){
+
+                this.plantas[i][j] = "";
+            
+            }
+
+        }
 
     }
 
-    agregatPropietario(propietario, numPlanta, numPuerta){
-        // TODO: implementar método
-
-
-
+    agregarPropietario(propietario, numPlanta, numPuerta){
+        
+        this.plantas[numPlanta-1][numPuerta-1] = propietario;
 
         this.mensajePropietario(propietario, numPlanta, numPuerta);
 
     }
 
     imprimePlantas(){
-        // TODO: implementar método
+        
+        let resultado = "";
+        for(let i = 0; i < this.plantas.length; i++){
+
+            for(let j = 0; j < this.plantas[i].length; j++){
+
+                resultado += `Propietario del piso ${j+1} de la planta ${i+1}: ${this.plantas[i][j]}<br/>`
+
+            }
+
+        }
+
+        return resultado;
 
     }
 
@@ -76,11 +99,39 @@ class Edificio {
 
 }
 
+// Construcción de edificios
+edificioA = new Edificio("García Prieto", "58", 15706);
+edificioB = new Edificio("Camino Caneiro", "29", 32004);
+edificioC = new Edificio("San Clemente", "s/n", 15705);
 
+// Uso de métodos get
+document.getElementById("mensaje").innerHTML += "<br/>";
+document.getElementById("mensaje").innerHTML += `El código postal del edificio A es: ${edificioA.imprimeCodigoPostal}.<br/>`;
+document.getElementById("mensaje").innerHTML += `La calle del edificio C es: ${edificioC.imprimeCalle}.<br/>`;
+document.getElementById("mensaje").innerHTML += `El edificio B está situado en la calle ${edificioB.imprimeCalle} número ${edificioB.imprimeNumero}.<br/>`;
 
+// Agregar plantas y puertas
+edificioA.agregarPlantasYPuertas(2, 3);
 
+// Agregar propietarios
+document.getElementById("mensaje").innerHTML += "<br/>";
+edificioA.agregarPropietario("Jose Antonio López", 1, 1);
+edificioA.agregarPropietario("Luisa Martinez", 1, 2);
+edificioA.agregarPropietario("Marta Castellón", 1, 3);
+edificioA.agregarPropietario("Antonio Pereira", 2, 2);
 
-edificio1 = new Edificio("Ribeiriña", "1B", 15659);
-edificio2 = new Edificio("Miramar Castrillón", "3", 15009);
-edificio3 = new Edificio("Nicaragua", "21", 15005);
+// Listado de propietarios del edificio A
+document.getElementById("mensaje").innerHTML += "<br/>";
+document.getElementById("mensaje").innerHTML += edificioA.imprimePlantas();
+
+// Agregar planta 2
+edificioA.agregarPlantasYPuertas(1, 3);
+
+// Agregar otro propietario
+document.getElementById("mensaje").innerHTML += "<br/>";
+edificioA.agregarPropietario("Pedro Meijide", 3, 2);
+
+// Listado de propietarios 2
+document.getElementById("mensaje").innerHTML += "<br/>";
+document.getElementById("mensaje").innerHTML += edificioA.imprimePlantas();
 
