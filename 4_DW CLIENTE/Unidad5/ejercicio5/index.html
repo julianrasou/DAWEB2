@@ -5,24 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 5</title>
     <script src="./ejercicio5.js" defer></script>
+    <style>
+        .error {
+            border: solid 2px #FF0000;
+        }
+        .error_etiqueta {
+            color: #cc0000;
+        }
+    </style>
 </head>
 <body>
     <form>
         
         <p>
-            Nombre del disco:
+            <label for="nombre" id="nombre_etiqueta">Nombre del disco:</label>
             <input type="text" name="nombre" id="nombre">
         </p>
         <p>
-            Grupo de música o cantante:
+            <label for="grupo" id="grupo_etiqueta">Grupo de música o cantante:</label>
             <input type="text" name="grupo" id="grupo">
         </p>
         <p>
-            Año de publicación:
+            <label for="anio" id="anio_etiqueta">Año de publicación:</label>
             <input type="text" name="anio" id="anio">
         </p>
         <p>
-            Tipo de música:
+            <label for="tipo">Tipo de música:</label>
             <select name="tipo" id="tipo">
                 <option value="pop">Pop</option>
                 <option value="rock">Rock</option>
@@ -31,14 +39,15 @@
             </select>
         </p>
         <p>
-            Localización en la estantería:
+            <label for="localizacion" id="localizacion_etiqueta">Localización en la estantería:</label>
             <input type="text" name="localizacion" id="localizacion">
         </p>
         <p>
-            Prestado:
+            <label for="prestado">Prestado:</label>
             <input type="checkbox" name="prestado" id="prestado"><label for="prestado">Sí</label>
         </p>
 
+        <button name="boton" id="boton" value="boton">Submit</button>
     </form>
 </body>
 </html>
