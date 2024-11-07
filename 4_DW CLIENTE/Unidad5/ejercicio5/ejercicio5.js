@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", jugar);
 
 function jugar() {
+
     let boton = document.querySelector("#boton");
     boton.addEventListener("click", validar);
+
 }
 
 function validar(e) {
@@ -12,12 +14,15 @@ function validar(e) {
     anio = validarAnio();
     localizacion = validarLocalizacion();
 
-    if (nombre && grupo && anio && confirm("¿Deseas enviar el formulario?")) {
+    if (nombre && grupo && anio && localizacion && confirm("¿Deseas enviar el formulario?")) {
+
        return true;
-        
+
     } else {
+
         e.preventDefault();
         return false;
+
     }
 }
 
@@ -27,14 +32,20 @@ function validarNombre() {
     let nombre = document.querySelector(selector).value;
 
     if(nombre === "") {
-        error(selector);
+
+        error(selector, "No puede estar vacío.");
         return false;
+
     }else if(nombre.length > 20) {
-        error(selector);
+
+        error(selector, "No puede tener más de 20 caracteres.");
         return false;
+
     }else {
+
         limpiarError(selector);
-        return true;  
+        return true; 
+        
     } 
     
 
@@ -46,14 +57,20 @@ function validarGrupo() {
     let grupo = document.querySelector(selector).value;
 
     if(grupo === "") {
-        error(selector);
+
+        error(selector, "No puede estar vacío.");
         return false;
+
     }else if(grupo.length > 20) {
-        error(selector);
+
+        error(selector, "No puede tener más de 20 caracteres.");
         return false;
+
     }else {
+
         limpiarError(selector);
         return true;
+
     }
 
 }
@@ -65,11 +82,15 @@ function validarAnio() {
     let patron = /^\d{4}$/;
 
     if(!patron.test(anio)) {
-        error(selector);
+
+        error(selector, "Año inválido.");
         return false;
+
     }else {
+
         limpiarError(selector);
         return true;
+
     }
 
 }
@@ -80,24 +101,30 @@ function validarLocalizacion() {
     let localizacion = document.querySelector(selector).value;
 
     if(isNaN(localizacion)) {
-        error(selector);
+
+        error(selector, "Localización inválida.");
         return false;
+
     }else {
+
         limpiarError(selector);
         return true;
+        
     }
 }
 
-function error(campo){
+function error(campo, mensaje) {
 
     document.querySelector(campo).classList.add("error");
     document.querySelector(campo+"_etiqueta").classList.add("error_etiqueta");
+    document.querySelector(campo+"_error").innerHTML = " " + mensaje;
 
 }
 
-function limpiarError(campo){
+function limpiarError(campo) {
 
     document.querySelector(campo).classList.remove("error");
     document.querySelector(campo+"_etiqueta").classList.remove("error_etiqueta");
+    document.querySelector(campo+"_error").innerHTML = "";
 
 }

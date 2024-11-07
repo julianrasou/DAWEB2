@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script src="./ejercicio7.js" defer></script>
+    <style>
+        .error {
+            border: solid 2px #FF0000;
+        }
+        .error_etiqueta {
+            color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        
+        <p>
+            <label for="creacion" id="creacion_etiqueta">Fecha de creación:</label>
+            <input type="text" name="creacion" id="creacion"><span id="creacion_error" class="error_etiqueta"></span>
+        </p>
+        <p>
+            <label for="empleado" id="empleado_etiqueta">Código del empleado:</label>
+            <input type="text" name="empleado" id="empleado"><span id="empleado_error" class="error_etiqueta"></span>
+        </p>
+        <p>
+            <label for="destinatario" id="destinatario_etiqueta">Destinatario:</label>
+            <input type="text" name="destinatario" id="destinatario"><span id="destinatario_error" class="error_etiqueta"></span>
+        </p>
+        <p>
+            <label for="peso" id="peso_etiqueta">Peso en gramos:</label>
+            <input type="text" name="peso" id="peso"><span id="peso_error" class="error_etiqueta"></span>
+        </p>
+        <p>
+            <label for="cuenta" id="cuenta_etiqueta">Número de cuenta:</label>
+            <input type="text" name="cuenta" id="cuenta" size="25"><span id="cuenta_error" class="error_etiqueta"></span>
+        </p>
+
+        <button name="boton" id="boton" value="boton">Submit</button>
+    </form>
+</body>
+</html>
