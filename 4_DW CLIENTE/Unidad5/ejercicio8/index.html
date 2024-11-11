@@ -6,15 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicio 8</title>
-        <script src="./ejercicio8.js"></script>
-        <style>
-            .error {
-                color: red;
-            }
-            .bien {
-                color: green;
-            }
-        </style>
+        <script src="./ejercicio8.js" defer></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -24,44 +17,45 @@
         <form action="" method="post">
 
             <p>
-                <h3 id="1">Pregunta 1:</h3> <span id="1_etiqueta">¿Cuál es el nombre del personaje principal?</span>
+                <b>Pregunta 1:</b> ¿Cuál es el nombre del personaje principal?
             </p>
             <p>
-                <input type="radio" name="1" id="1a" value="a"><label for="1a" id="1a_etiqueta">Monkey D. Luffy</label><br/>
-                <input type="radio" name="1" id="1b" value="b"><label for="1b" id="1b_etiqueta">Trafalgar Law</label><br/>
-                <input type="radio" name="1" id="1c" value="c"><label for="1c" id="1c_etiqueta">Bonchan</label>
+                <input type="radio" name="1" id="p1a" value="a"><label for="p1a" id="p1a_etiqueta">Monkey D. Luffy</label><br/>
+                <input type="radio" name="1" id="p1b" value="b"><label for="p1b" id="p1b_etiqueta">Trafalgar Law</label><br/>
+                <input type="radio" name="1" id="p1c" value="c"><label for="p1c" id="p1c_etiqueta">Bonchan</label>
             
 
             <p>
-                <h3 id="2">Pregunta 2:</h3> <span id="2_etiqueta">¿Cuántos hermanos tiene el personaje principal de one piece?</span>
+                <b>Pregunta 2:</b> ¿Cuántos hermanos tiene el personaje principal de one piece?
             </p>
             <p>
-                <input type="radio" name="2" id="2a" value="a"><label for="2b" id="2a_etiqueta">Ninguno</label><br/>
-                <input type="radio" name="2" id="2b" value="b"><label for="2c" id="2b_etiqueta">Dos</label><br/>
-                <input type="radio" name="2" id="2c" value="c"><label for="2d" id="2c_etiqueta">Uno</label>
-            </p>
-
-            <p>
-                <h3 id="3">Pregunta 3:</h3> <span id="3_etiqueta">¿Cómo se llamaba el primer barco de la tripulación y quién se lo dió?</span>
-            </p>
-            <p>
-                <input type="radio" name="3" id="3a" value="a"><label for="3a" id="3a_etiqueta">Thousand sunny, Franky</label><br/>
-                <input type="radio" name="3" id="3b" value="b"><label for="3b" id="3b_etiqueta">Going Merry, Kaya</label><br/>
-                <input type="radio" name="3" id="3v" value="c"><label for="3c" id="3c_etiqueta">No tenía nombre, lo robaron</label><br/>
+                <input type="radio" name="2" id="p2a" value="a"><label for="p2a" id="p2a_etiqueta">Ninguno</label><br/>
+                <input type="radio" name="2" id="p2b" value="b"><label for="p2b" id="p2b_etiqueta">Dos</label><br/>
+                <input type="radio" name="2" id="p2c" value="c"><label for="p2c" id="p2c_etiqueta">Uno</label>
             </p>
 
             <p>
-                <h3 id="4">Pregunta 4:</h3> <span id="4_etiqueta">¿Cómo se llama realmente Miss All Sunday?</span>
+                <b>Pregunta 3:</b> ¿Cómo se llamaba el primer barco de la tripulación y quién se lo dió?
             </p>
             <p>
-                <input type="radio" name="4" id="4a" value="a"><label for="4a" id="4a_etiqueta">Camie</label><br/>
-                <input type="radio" name="4" id="4b" value="b"><label for="4b" id="4b_etiqueta">Nico Robin</label><br/>
-                <input type="radio" name="4" id="4c" value="c"><label for="4c" id="4c_etiqueta">Brulee</label><br/>
+                <input type="radio" name="3" id="p3a" value="a"><label for="p3a" id="p3a_etiqueta">Thousand sunny, Franky</label><br/>
+                <input type="radio" name="3" id="p3b" value="b"><label for="p3b" id="p3b_etiqueta">Going Merry, Kaya</label><br/>
+                <input type="radio" name="3" id="p3c" value="c"><label for="p3c" id="p3c_etiqueta">No tenía nombre, lo robaron</label><br/>
+            </p>
+
+            <p>
+                <b>Pregunta 4:</b> ¿Cómo se llama realmente Miss All Sunday?
+            </p>
+            <p>
+                <input type="radio" name="4" id="p4a" value="a"><label for="p4a" id="p4a_etiqueta">Camie</label><br/>
+                <input type="radio" name="4" id="p4b" value="b"><label for="p4b" id="p4b_etiqueta">Nico Robin</label><br/>
+                <input type="radio" name="4" id="p4c" value="c"><label for="p4c" id="p4c_etiqueta">Brulee</label><br/>
             </p>
 
             <input type="submit" id="submit">
 
         </form>
+        <h3 id="total"></h3>
 
     </body>
 

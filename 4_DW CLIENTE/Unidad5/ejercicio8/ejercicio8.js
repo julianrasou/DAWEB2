@@ -1,4 +1,5 @@
 let respuestas = ["a", "b", "b", "b"];
+let total;
 
 document.addEventListener("DOMContentLoaded", comprobar);
 
@@ -11,10 +12,15 @@ function comprobar() {
 
 function validar(e) {
 
+    total = 0;
+
     validarPregunta("1");
     validarPregunta("2");
     validarPregunta("3");
     validarPregunta("4");
+
+    document.getElementById("total").innerHTML = "Respuestas correctas: " + total; 
+    
     e.preventDefault();
 
 }
@@ -22,23 +28,30 @@ function validar(e) {
 function validarPregunta(pregunta) {
 
     let respuesta = "";
-    if(document.getElementById(pregunta + "a").checked) {
+    if(document.getElementById("p" + pregunta + "a").checked) {
         respuesta = "a";
-    }else if(document.getElementById(pregunta + "b").checked) {
+    }else if(document.getElementById("p" + pregunta + "b").checked) {
         respuesta = "b";
-    }else if(document.getElementById(pregunta + "c").checked) {
+    }else if(document.getElementById("p" + pregunta + "c").checked) {
         respuesta = "c";
     }else {
         respuesta = "";
     }
 
-    let selector = "#" + pregunta + respuesta;
-    if(respuesta == ""){
+    let selector = "p" + pregunta + respuesta;
+    quitarEstilos("p" + pregunta + "a")
+    quitarEstilos("p" + pregunta + "b")
+    quitarEstilos("p" + pregunta + "c")
 
-        error(selector);
+    if(respuesta == ""){
+        
+        error(selector + "a");
+        error(selector + "b");
+        error(selector + "c");
 
     }else if(respuesta === respuestas[pregunta - 1]) {
 
+        total += 1;
         bien(selector);
 
     }else {
@@ -51,14 +64,23 @@ function validarPregunta(pregunta) {
 
 function error(campo) {
 
-    document.querySelector(campo).classList.add("error");
-    document.querySelector(campo+"_etiqueta").classList.add("error");
+    document.getElementById(campo).classList.add("error");
+    document.getElementById(campo+"_etiqueta").classList.add("error");
+
+}
+
+function quitarEstilos(campo) {
+
+    document.getElementById(campo).classList.remove("error");
+    document.getElementById(campo+"_etiqueta").classList.remove("error");
+    document.getElementById(campo).classList.remove("bien");
+    document.getElementById(campo+"_etiqueta").classList.remove("bien");
 
 }
 
 function bien(campo) {
 
-    document.querySelector(campo).classList.add("bien");
-    document.querySelector(campo+"_etiqueta").classList.add("bien");
+    document.getElementById(campo).classList.add("bien");
+    document.getElementById(campo+"_etiqueta").classList.add("bien");
 
 }
