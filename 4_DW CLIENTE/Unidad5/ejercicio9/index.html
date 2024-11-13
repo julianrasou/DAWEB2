@@ -3,11 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon login</title>
-    <script src="./ejercicio9.js" defer></script>
+    <title>Registro de Amazon</title>
+    <script src="./ejercicio9.js" defer></script> <!-- cambiar src a ./ejercicio99.js y recargar la página para limpiar el localstorage entre pruebas. no tiene funcionalidad, cambiar de vuelta -->
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .error_etiqueta {
+            color: red;
+        }
+        .error {
+            border: 1px solid red
+        }
+    </style>
 </head>
 <body>
-    <img src="https://www.cuponation.es/images/256x/images/a/amazon-cupones-descuento_logo.png">
+    <main>
+        <div id="logo">
+            <img src="https://www.cuponation.es/images/256x/images/a/amazon-cupones-descuento_logo.png">
+        </div>
+
+        <div id="formulario">
+
+            <form action="" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">
+                <span id="nombre_etiqueta" class="error_etiqueta"></span>
+
+                <label for="email">Dirección de correo electrónico:</label>
+                <input type="email" name="email" id="email">
+                <span id="email_etiqueta" class="error_etiqueta"></span>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" id="contrasena">
+                <span id="contrasena_etiqueta" class="error_etiqueta"></span>
+
+                <label for="contrasena2">Confirma tu contraseña:</label>
+                <input type="password" name="contrasena2" id="contrasena2">
+                <span id="contrasena2_etiqueta" class="error_etiqueta"></span>
+
+                <button type="submit" id="boton">Continuar</button>
+        
+                <p>
+                    Al crear una cuenta, aceptas las <a href="https://www.amazon.es/gp/help/customer/display.html/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=200545940">Condiciones de uso y venta</a> de Amazon.
+                    Consulta el <a href="https://www.amazon.es/gp/help/customer/display.html/ref=ap_register_notification_privacy_notice?ie=UTF8&nodeId=200545460">Aviso de privacidad</a>
+                    , el <a href="https://www.amazon.es/gp/help/customer/display.html/?nodeId=201890250">Aviso de cookies</a> 
+                    y el <a href="https://www.amazon.es/gp/help/customer/display.html?nodeId=201909150">Aviso de anuncios basados en intereses</a>.
+                </p>
+
+            </form>
+
+        </div>
+
+    </main>
+    
+    
 </body>
 </html>

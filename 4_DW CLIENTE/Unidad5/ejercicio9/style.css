@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    background-color: #f6f6f6;
+    color: #111;
+    padding: 20px;
+}
+
+#logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+img {
+    width: 10em;
+    height: auto;
+}
+
+#formulario {
+    max-width: 400px;
+    min-width: 320px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #232f3e;
+}
+
+label {
+    font-size: 0.95em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+input{
+    width: 100%;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #f6f6f6;
+}
+
+input:focus {
+    border-color: #ff9900;
+    background-color: #fff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+
+p {
+    font-size: 0.85em;
+    margin-top: 20px;
+    color: #555;
+}
+
+a {
+    color: #0073bb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
