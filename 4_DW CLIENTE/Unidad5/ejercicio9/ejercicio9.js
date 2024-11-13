@@ -31,6 +31,8 @@ function validar(e) {
     if (nombre && email && contrasena && confirm("¿Deseas enviar el formulario?")) {
 
         localStorage.setItem("nombre", document.querySelector("#nombre").value);
+        window.location.href = 'https://www.amazon.es';
+        e.preventDefault();
         return true;
         
     } else {
