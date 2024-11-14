@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.6em;
+    color: #767476;
+}
+
+body {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    background-color: #f6f6f6;
+    color: #111;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+main {
+    width: 22%;
+    margin: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+button {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #FC6612;
+    font-weight: bold;
+    color: #f6f6f6;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    margin: 0.50em 0 0 0.5em;
+    color: rgb(82, 82, 82);
+    font-size: 1em;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    margin: 0.25em 0.5em;
+    color: rgb(82, 82, 82);
+    font-size: 1em;
+}
