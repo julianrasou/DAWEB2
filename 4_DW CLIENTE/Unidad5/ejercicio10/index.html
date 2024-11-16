@@ -16,18 +16,20 @@
             
             <label for="documento">Elige tu documento</label>
             <div id="documento">
-                <input type="radio" name="tipoDocumento" id="dni" required><label for="dni">DNI o Targeta de residencia</label><br/>
-                <input type="radio" name="tipoDocumento" id="pasaporte"><label for="pasaporte">Pasaporte</label>
+                <input type="radio" name="tipoDocumento" id="dni" value="dni"><label for="dni">DNI o Targeta de residencia</label><br/>
+                <input type="radio" name="tipoDocumento" id="pasaporte" value="pasaporte"><label for="pasaporte">Pasaporte</label>
             </div>
     
             <label for="numDocumento">Número de documento</label>
             <div>
-                <input type="text" name="numDocumento" id="numDocumento" placeholder="DNI o Targeta de residencia" required>
+                <input type="text" name="numDocumento" id="numDocumento" placeholder="DNI o Targeta de residencia">
+                <p id="errorDocumento">Número de documento inválido</p>
             </div>
     
             <label for="nacimiento">Fecha de nacimiento</label>
             <div>
-                <input type="date" name="nacimiento" id="nacimiento" required>
+                <input type="date" name="nacimiento" id="nacimiento">
+                <p id="errorFecha">La fecha es obligatoria</p>
             </div>
     
             

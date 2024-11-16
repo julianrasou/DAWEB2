@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Área de Clientes</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="./clave.js"></script>
+</head>
+<body>
+    <div class="container" id="claveContainer" style="display:none;">
+        <h2>Completa tu clave de seguridad</h2>
+
+        <!-- Tabla para mostrar la clave de seguridad (vacía inicialmente) -->
+        <table id="claveTable">
+            <tr>
+                <td class="empty" data-position="0"></td>
+                <td class="empty" data-position="1"></td>
+                <td class="empty" data-position="2"></td>
+                <td class="empty" data-position="3"></td>
+                <td class="empty" data-position="4"></td>
+                <td class="empty" data-position="5"></td>
+            </tr>
+        </table>
+
+        <!-- Tabla con los números aleatorios -->
+        <table id="numbersTable">
+            <tr>
+                <td>0</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </table>
+
+        <div class="message" id="message"></div>
+    </div>
+</body>
+</html>
