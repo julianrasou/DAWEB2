@@ -7,6 +7,8 @@ function iniciar() {
     document.querySelector("#nombre").addEventListener("focusout", mayus);
     document.querySelector("#apellidos").addEventListener("focusout", mayus);
 
+    mostrarIntentos();
+
 }
 
 function validar(e) {
@@ -19,8 +21,12 @@ function validar(e) {
     let email = validarEmail();
     let provincia = validarProvincias();
     let fecha = validarFecha();
+    let numero = validarTelefono();
+    let hora = validarHora();
 
-    if(nombre && apellidos && edad && nif && email && provincia && fecha && confirm("¿Desea enviar el formulario?")) {
+    incrementarIntentos();
+
+    if(nombre && apellidos && edad && nif && email && provincia && fecha && numero && hora && confirm("¿Desea enviar el formulario?")) {
 
         return true;
 
@@ -31,6 +37,42 @@ function validar(e) {
 
     }
 
+}
+
+function setCookie(name, value) {
+
+    document.cookie = `${name}=${value}`;
+
+}
+
+function getCookie(name) {
+
+    const cookies = document.cookie.split(";").map(cookie => cookie.trim());
+    const match = cookies.find(cookie => cookie.startsWith(`${name}=`));
+    return match ? decodeURIComponent(match.split("=")[1]) : null;
+
+}
+
+function mostrarIntentos() {
+
+    const intentos = getCookie("form_attempts") || 0;
+    const intentosDiv = document.getElementById("intentos");
+
+    if (intentosDiv) {
+
+        intentosDiv.innerHTML = `Intentos de envío del formulario: ${intentos}`;
+
+    }
+
+}
+
+function incrementarIntentos() {
+
+    let intentos = parseInt(getCookie("form_attempts")) || 0;
+    intentos++;
+    setCookie("form_attempts", intentos, 1); // La cookie expira en 1 día
+    mostrarIntentos();
+    
 }
 
 function validarNombreApellido(selector, mensaje) {
@@ -148,6 +190,44 @@ function validarFecha(){
 
     }
 
+}
+
+function validarTelefono() {
+
+    let telefono = document.querySelector("#telefono");
+    let patron = /^([0-9]{9})$/;
+
+    if(telefono.value === "" || !patron.test(telefono.value)){
+        
+        error(telefono, "Por favor, introduce un teléfono válido");
+        return false;
+
+    }else{
+
+        limpiarError(telefono);
+        return true;
+
+    }
+    
+}
+
+function validarHora(){
+
+    let hora = document.getElementById('hora');
+    let patron = /^([0-1][0-9]|2[0-3])\:[0-5][0-9]$/;
+
+    if(hora.value === "" || !patron.test(hora.value)){
+
+        error(hora, "Por favor introduce una hora válida");
+        return false;
+
+    }else{
+
+        limpiarError(hora);
+        return true;
+
+    }
+    
 }
 
 function error(elemento, mensaje) {
