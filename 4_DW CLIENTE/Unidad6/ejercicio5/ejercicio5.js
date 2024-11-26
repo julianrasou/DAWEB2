@@ -6,16 +6,17 @@ const divErrores = document.querySelector("#errores");
 function iniciar() {
 
     document.querySelector("#crear").addEventListener("click", crear);
+    document.querySelector("#texto").focus();
 
 }
 
 
 function crear() {
 
-    let texto = document.querySelector("#texto").value;
+    let texto = document.querySelector("#texto");
     let color = document.querySelector("#color").value;
 
-    if(texto === "") {
+    if(texto.value === "") {
         
         divErrores.innerHTML = "El campo texto no puede quedar vacío"
 
@@ -25,10 +26,13 @@ function crear() {
 
         let parrafo = document.createElement("p");
         parrafo.style.background = color;
-        parrafo.appendChild(document.createTextNode(texto));
+        parrafo.appendChild(document.createTextNode(texto.value));
 
         divParrafos.appendChild(parrafo);
 
     }
+
+    texto.value = "";
+    texto.focus()
     
 }
