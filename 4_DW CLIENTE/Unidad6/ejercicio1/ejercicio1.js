@@ -25,23 +25,39 @@ function iniciar() {
 }
 
 function añadir() {
-
     let texto = document.querySelector("#input").value;
 
-    tareas.push(new Tarea(texto));
+    if (texto.trim() === "") {
+        alert("Escribe una tarea antes de añadirla.");
+        return;
+    }
 
+    let tarea = new Tarea(texto);
     let lista = document.querySelector("#lista");
 
     let elemento = document.createElement("li");
     let checkbox = document.createElement("input");
-    checkbox.setAttribute("type", "checkbox")
+    let textoSpan = document.createElement("span");
+    textoSpan.textContent = texto;
 
-    elemento.appendChild(checkbox)
-    elemento.appendChild(document.createTextNode(texto));
+    checkbox.setAttribute("type", "checkbox");
 
-    // checkbox.addEventListener("click", cambiar)
-    
+    checkbox.addEventListener("change", function () {
+        tarea.completada = checkbox.checked;
+        if (checkbox.checked === true) {
+            textoSpan.classList.add("completada");
+        } else {
+            textoSpan.classList.remove("completada");
+        }
+    });
+
+    elemento.appendChild(checkbox);
+    elemento.appendChild(textoSpan);
     lista.appendChild(elemento);
 
+    tareas.push(tarea);
+
+    // Limpiar el input después de añadir
+    document.querySelector("#input").value = "";
 }
 
