@@ -1,5 +1,7 @@
 window.addEventListener("DOMContentLoaded",iniciar);
 
+let discos = [];
+
 function iniciar() {
 
     ////////////////////////////////////////////////////////////
@@ -183,7 +185,7 @@ function iniciar() {
     formulario.appendChild(pPrestado);
     formulario.appendChild(boton);
 
-    document.querySelector("body").appendChild(formulario);
+    document.querySelector("main").appendChild(formulario);
 
     document.querySelector("#boton").addEventListener("click", function (e) {
 
@@ -192,9 +194,26 @@ function iniciar() {
         anio = validarAnio();
         localizacion = validarLocalizacion();
     
-        if (nombre && grupo && anio && localizacion && confirm("¿Deseas enviar el formulario?")) {
+        if (nombre && grupo && anio && localizacion) {
     
-           return true;
+            e.preventDefault();
+
+            let nombre = document.querySelector("#nombre").value;
+            let grupo = document.querySelector("#grupo").value;
+            let anio = document.querySelector("#anio").value;
+            let tipo = document.querySelector("#tipo").value;
+            let localizacion = document.querySelector("#localizacion").value;
+            let prestado = document.querySelector("#prestado").checked;
+
+            let a = [nombre, grupo, anio, tipo, localizacion, prestado];
+
+            discos.push(a)
+
+            console.log(discos)
+            
+            pintarTabla()
+
+            return true;
     
         } else {
     
@@ -311,7 +330,61 @@ function iniciar() {
 
 }
 
+function pintarTabla() {
 
+    let tabla = document.createElement("table");
+
+    let cabecera = document.createElement("tr");
+    let nombre = document.createElement("td");
+    nombre.appendChild(document.createTextNode("Nombre"));
+    cabecera.appendChild(nombre);
+
+    let grupo = document.createElement("td");
+    grupo.appendChild(document.createTextNode("Grupo"));
+    cabecera.appendChild(grupo);
+
+    let anio = document.createElement("td");
+    anio.appendChild(document.createTextNode("Anio"));
+    cabecera.appendChild(anio);
+
+    let tipo = document.createElement("td");
+    tipo.appendChild(document.createTextNode("Tipo"));
+    cabecera.appendChild(tipo);
+
+    let localizacion = document.createElement("td");
+    localizacion.appendChild(document.createTextNode("Localizacion"));
+    cabecera.appendChild(localizacion)
+
+    let prestado = document.createElement("td");
+    prestado.appendChild(document.createTextNode("Prestado"));
+    cabecera.appendChild(prestado)
+
+    tabla.appendChild(cabecera);
+
+    discos.forEach(disco => {
+
+        let tr = document.createElement("tr");
+
+        disco.forEach(elemento => {
+
+            let td = document.createElement("td");
+            td.appendChild(document.createTextNode(elemento));
+
+            tr.appendChild(td);
+
+        })
+
+        tabla.appendChild(tr);
+        
+    });
+
+    tabla.border = "1";
+    tabla.style.borderCollapse = "collapse";
+
+    document.querySelector("#tabla").innerHTML = "";
+    document.querySelector("#tabla").appendChild(tabla);
+
+}
 
 
 
