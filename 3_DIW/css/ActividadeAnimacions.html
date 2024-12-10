@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            /* Se aplican estilos para el div de forma que se muestre como un cubo de color rojo en el medio de la pantalla */
+            div {
+                width: 60px;
+                height: 60px;
+                background-color: red;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Se aplica la animación cuando el ratón pasa por encima del cubo, dura un segundo y medio y se repite de forma ilimitada hasta que retires el ratón */
+            div:hover {
+                animation-name: example;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+
+            }
+
+            /* Código de la animación */
+            @keyframes example {
+                /* Al inicio su posición no cambia */
+                0% {
+                    transform: rotate(0deg)
+                }
+                /* Al 33 por ciento de progreso se rota 20 grados */
+                33% {
+                    transform: rotate(20deg)
+                }
+                /* Al 67 por ciento del progreso vuelve hasta los -20 grados */
+                67% {
+                    transform: rotate(-20deg)
+                }
+                /* Al final de la animación, el cubo vuelve a su sitio */
+                100% {
+                    transform: rotate(0deg)
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- El div en cuestión -->
+        <div></div>
+
+
+    </body>
+
+</html>
