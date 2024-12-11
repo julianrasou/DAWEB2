@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Documento</title>
+        <script src="ejercicio7.js"></script>
+    </head>
+    
+    <body>
+    
+        <div id="contenido">
+            <h1>Insertar edificios:</h1>
+            <div>
+                <form id="formulario1" action="">
+                    <p>
+                        <label id="direccionEtiq">Dirección: </label><input id="direccion" type="text" required="">
+                    </p>
+                    <p>
+                        <label id="numeroEtiq">Numero: </label><input id="numero" type="text" required="">
+                    </p>
+                    <p>
+                        <label id="cpEtiq">Codigo postal: </label><input id="cp" type="text" required="">
+                    </p>
+                    <p>
+                        <label id="plantaEtiq">Planta: </label><input id="planta" type="text" required="">
+                    </p>
+                    <p>
+                        <label id="puertaEtiq">Puerta: </label><input id="puerta" type="text" required="">
+                    </p>
+                    
+                    <button name="boton" id="boton" value="boton">Enviar</button>
+
+                </form>
+            </div>
+            <h1>Listado de los Edificios</h1>
+            <div id="listaEdificios">
+
+            </div>
+            <h1>Modificar Edificios</h1>
+            <div>
+                <form id="formulario2" method="">
+
+                    <p>
+                        <label id="plantaEtiq2">Planta: </label><input id="planta2" type="text" required="">
+                    </p>
+                    <p>
+                        <label id="puertaEtiq2">Puerta: </label><input id="puerta2" type="text" required="">
+                    </p>
+                    <p>
+                        <label id="propietarioEtiq">Propietario: </label><input id="propietario" type="text" required="">
+                    </p>
+
+                    <button name="boton" id="boton" value="boton">Enviar</button>
+
+                </form>
+            </div>
+            <h1>Seleccionar</h1><select id="selectEdificio" style="width: 20%;"></select><button id="mostrar">Mostrar</button>
+        </div>
+    </body>
+</html>
