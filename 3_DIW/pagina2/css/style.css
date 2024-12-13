@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    background:url(../img/fondo.png) ;
+}
+
+header {
+    background-color: gray;
+    width: 100%;
+    padding: 10px;
+}
+
+.logo {
+    height: 50px;
+    margin: 5px 30px;
+}
+
+.titulo {
+    color: white;
+    font-size: 1.8em;
+    margin-right: 50px;
+}
+
+.divHead {
+    display: flex;
+    align-items: center;
+}
+
+.botonNav {
+    border-radius: 5px;
+    background-color: rgb(83, 83, 83);
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    padding: 7px 10px;
+    margin-left: 10px;
+}
+
+.seleccionado {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+main {
+    width: 60%;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    margin: 40px auto;
+    
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
