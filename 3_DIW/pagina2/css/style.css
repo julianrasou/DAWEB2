@@ -1,3 +1,6 @@
+/*
+    NOTE: Estilos generales para la página
+*/
 * {
     box-sizing: border-box;
 }
@@ -11,29 +14,54 @@ body, html {
     line-height: 2em;
 }
 
+main h1 {  /* Estilos para los títulos */
+    margin-bottom: 0;
+}
+main hr {
+    margin-bottom: 30px;
+}
+main h1:hover {
+    color: rgb(156, 156, 156);
+}
+main h1:hover::before {
+    content: "# ";
+    color: rgb(156, 156, 156);
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: 400;
+    word-spacing: 0.3em;
+    margin-bottom: 30px;
+}
+
+/* 
+    NOTE: Estilos para el header, el menú de navegación y el logo
+*/
+
 header {
     background-color: gray;
     width: 100%;
     padding: 10px;
 }
 
-.logo {
+header img {
     height: 50px;
     margin: 5px 30px;
 }
 
-.titulo {
+header span {
     color: white;
     font-size: 1.8em;
     margin-right: 50px;
 }
 
-.divHead {
+header div {
     display: flex;
     align-items: center;
 }
 
-.botonNav {
+header a {
     border-radius: 5px;
     background-color: rgb(83, 83, 83);
     text-decoration: none;
@@ -47,16 +75,9 @@ header {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 }
 
-main {
-    width: 60%;
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 50px 50px 150px 50px;
-    margin: 40px auto;
-    height: fit-content;
-    
-}
+/*
+    NOTE: Estilos del footer, el pie de página
+*/
 
 footer {
     background-color: gray;
@@ -76,28 +97,24 @@ footer a {
     text-decoration: none;
     color: white;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
 
-.karlos {
-    background-image: url(../img/karlos.jpg);
-    background-size: cover;
-    background-position: top;
-    height: 400px;
-}
-h1 {
-    margin-bottom: 0;
-}
-hr {
-    margin-bottom: 30px;
-}
+/*
+    NOTE: Estilos para el main, el contenido principal de la página
+*/
 
-p {
-    font-size: 1.2em;
-    font-weight: 400;
-    word-spacing: 0.3em;
-    margin-bottom: 30px;
+main {
+    width: 60%;
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 50px 50px 150px 50px;
+    margin: 40px auto;
+    height: fit-content;
+    
 }
 
 li {
@@ -112,4 +129,66 @@ li::before {
     color: rgb(156, 156, 156);
     margin-right: 1.5em;
     font-weight: 600;
+}
+
+#imagen-index { /* Imagen de Arguiñano para el index */
+    background-image: url(../img/karlos.jpg);
+    background-size: cover;
+    background-position: top;
+    height: 400px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.tarjeta {
+    width: 37%;
+    background-color: rgba(161, 161, 161, 0.534);
+    border-radius: 5px;
+    height: 400px;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
+}
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+.tarjeta hr {
+    margin: 0;
+}
+.fondo-tarjeta-merluza {
+    background-image: url(../img/merluza.jpg);
+}
+.fondo-tarjeta-chuletas {
+    background-image: url(../img/chuleta.jpg);
+}
+.fondo-tarjeta-pollo {
+    background-image: url(../img/pollo.jpg);
+}
+.fondo-tarjeta-salmon {
+    background-image: url(../img/salmon.jpg);
+}
+.fondo-tarjeta{
+    height: 40%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px 5px 0px 0px;
+}
+.tarjeta h3 {
+    margin-top: 0;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+.contenido-tarjeta {
+    padding: 15px;
+    margin: 0;
+}
+.contenido-tarjeta p {
+    font-size: small;
+    margin: 0 20px;
+    text-align: center;
 }
