@@ -1,0 +1,54 @@
+a::before {
+    content: "→";
+}
+
+h1::first-letter, h2::first-letter {
+    font-size: large;
+}
+
+li:first-child {
+    background-color: rgb(255, 126, 126);
+}
+li:last-child {
+    background-color: rgb(128, 128, 255);
+}
+
+a:link {
+    color: green;
+    text-decoration: none;
+}
+a:visited {
+    color: green;
+    text-decoration: underline;
+}
+
+a:hover {
+    font-size: 3em;
+}
+
+a:active {
+    color: blue;
+}
+
+abbr::after {
+    content: " (Significado: " attr(title) ")";
+}
+
+#ejercicio5 li:nth-child(1) {
+    font-size: 1em;
+}
+#ejercicio5 li:nth-child(2) {
+    font-size: 1.5em;
+}
+#ejercicio5 li:nth-child(3) {
+    font-size: 2em;
+}
+#ejercicio5 li:nth-child(4) {
+    font-size: 2.5em;
+}
+#ejercicio5 li:nth-child(5) {
+    font-size: 3em;
+}
+#ejercicio5 li:nth-child(6) {
+    font-size: 3.5em;   
+}
