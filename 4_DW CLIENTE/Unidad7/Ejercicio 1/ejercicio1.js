@@ -19,20 +19,15 @@ let clientes = [
 ]; */
 
 const xhr = new XMLHttpRequest();
-xhr.open("GET", "./clientes.txt");
+xhr.open("GET", "./clientes.json");
 xhr.send(); 
 
+let clientes = [];
 xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
-        
+        clientes = JSON.parse(xhr.responseText)
     }
 };
-
-
-
-
-
-
 
 
 
@@ -76,14 +71,14 @@ function mostrar() {
 
     }else if(input == "3"){
         
-        resultado = `<table border="1"><tr><td>Nombre</td><td>Localidad</td></tr>`;
+        resultado = `<table border="1"><tr><td>Nombre</td><td>Localidad</td><td>Cuota</td></tr>`;
         let cuota = prompt("Elige una cuota: 30, 40, 50, 60");
         
         clientes.forEach(elemento => {
 
             if(elemento.cuota >= cuota){
 
-                resultado += `<tr><td>${elemento.nombre}</td><td>${elemento.localidad}</td></tr>`;
+                resultado += `<tr><td>${elemento.nombre}</td><td>${elemento.localidad}</td><td>${elemento.cuota}</td></tr>`;
 
             }
 

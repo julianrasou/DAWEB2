@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <disco>
+        <nombre></nombre>
+        <grupo></grupo>
+        <publicacion></publicacion>
+        <genero></genero>
+        <localizacion>0</localizacion>
+        <prestado>false</prestado>
+        <caratula>imagen.png</caratula>
+    </disco>
+</catalogo>
