@@ -1,15 +1,15 @@
 import * as lib from "./libreria.js";
 
 class Disco {
-    constructor(nombre, grupo, publicacion, genero) {
+    constructor(nombre, grupo, publicacion, genero, localizacion, prestado, caratula) {
 
         this.nombre = nombre;
         this.grupo = grupo;
         this.publicacion = publicacion;
         this.genero = genero;
-        this.localizacion = 0;
-        this.prestado = false;
-        this.caratula = "imagen.png";
+        this.localizacion = localizacion;
+        this.prestado = prestado;
+        this.caratula = caratula;
 
     }
 
@@ -130,38 +130,67 @@ xhr.open("GET", "./discos.xml");
 xhr.send(); 
 
 
+let discos = [];
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+
+        let xmlDiscos = xhr.responseXML.getElementsByTagName("disco");
+        console.log(xmlDiscos);
+        for (let i = 0; i < xmlDiscos.length; i++) {
+            let disco = new Disco(
+                xmlDiscos[i].getElementsByTagName("nombre")[0].textContent,
+                xmlDiscos[i].getElementsByTagName("grupo")[0].textContent,
+                xmlDiscos[i].getElementsByTagName("publicacion")[0].textContent,
+                xmlDiscos[i].getElementsByTagName("genero")[0].textContent,
+                xmlDiscos[i].getElementsByTagName("localizacion")[0].textContent,
+                xmlDiscos[i].getElementsByTagName("prestado")[0].textContent,
+                xmlDiscos[i].getElementsByTagName("caratula")[0].textContent
+            )
+            discos.push(disco)
+        };
+        
+    }
+    
+    console.log(discos);
+
+    ejercicio();
+
+
+
+};
+
+
+
+function ejercicio() {
+
+    // Mostrar número de discos:
+    document.getElementById("apartado1").innerHTML = `Hay ${lib.contar(discos)} discos.`;
+
+    document.getElementById("apartado2").innerHTML = "Orden normal: <br>" + mostrarDiscos(discos);
+    document.getElementById("apartado22").innerHTML = "Del revés: <br>" + mostrarDiscos(lib.mostrar(discos, 2));
+    document.getElementById("apartado222").innerHTML = "Alfabéticamente: <br>" + mostrarDiscos(lib.mostrar(discos, 3));
+
+
+    document.getElementById("apartado3").innerHTML = "Discos en rango de 2000 a 2001: " + mostrarPorAño(discos, 2000, 2001);
+
+    let d5 = new Disco("E El disco5", "El grupo5", 2003, "El género5");
+    let d6 = new Disco("F El disco6", "El grupo6", 2004, "El género6");
+
+    document.getElementById("apartado4").innerHTML = "Añadido disco al final: <br> " + mostrarDiscos(lib.añadir(discos, 2, d5));
+    document.getElementById("apartado44").innerHTML = "Añadido disco al principio: <br> " + mostrarDiscos(lib.añadir(discos, 1, d6));
+
+    lib.borrar(discos, 1);
+    document.getElementById("apartado5").innerHTML = "Borrado disco del principio: <br> " + mostrarDiscos(discos);
+    lib.borrar(discos, 2);
+    document.getElementById("apartado55").innerHTML = "Borrado disco del final: <br> " + mostrarDiscos(discos);
+
+    document.getElementById("apartado6").innerHTML = "Buscar índice 2: <br> " + mostrarDisco(lib.buscarIndice(discos, 2));
+    document.getElementById("apartado66").innerHTML = "Posición del disco B El disco2: " + lib.buscarNombre(discos, "B El disco2");
 
 
 
 
 
-
-
-
-// Mostrar número de discos:
-document.getElementById("apartado1").innerHTML = `Hay ${lib.contar(discos)} discos.`;
-
-document.getElementById("apartado2").innerHTML = "Orden normal: <br>" + mostrarDiscos(discos);
-document.getElementById("apartado22").innerHTML = "Del revés: <br>" + mostrarDiscos(lib.mostrar(discos, 2));
-document.getElementById("apartado222").innerHTML = "Alfabéticamente: <br>" + mostrarDiscos(lib.mostrar(discos, 3));
-
-
-document.getElementById("apartado3").innerHTML = "Discos en rango de 2000 a 2001: " + mostrarPorAño(discos, 2000, 2001);
-
-let d5 = new Disco("E El disco5", "El grupo5", 2003, "El género5");
-let d6 = new Disco("F El disco6", "El grupo6", 2004, "El género6");
-
-document.getElementById("apartado4").innerHTML = "Añadido disco al final: <br> " + mostrarDiscos(lib.añadir(discos, 2, d5));
-document.getElementById("apartado44").innerHTML = "Añadido disco al principio: <br> " + mostrarDiscos(lib.añadir(discos, 1, d6));
-
-lib.borrar(discos, 1);
-document.getElementById("apartado5").innerHTML = "Borrado disco del principio: <br> " + mostrarDiscos(discos);
-lib.borrar(discos, 2);
-document.getElementById("apartado55").innerHTML = "Borrado disco del final: <br> " + mostrarDiscos(discos);
-
-document.getElementById("apartado6").innerHTML = "Buscar índice 2: <br> " + mostrarDisco(lib.buscarIndice(discos, 2));
-document.getElementById("apartado66").innerHTML = "Posición del disco B El disco2: " + lib.buscarNombre(discos, "B El disco2");
-
-
+}
 
 
