@@ -1,0 +1,15 @@
+.helvetica {
+    font-family: Helvetica;
+}
+.arial {
+    font-family: Arial;
+}
+.arial span {
+    font-size: 150%;
+}
+.times {
+    font-family: 'Times New Roman';
+}
+.times span {
+    font-style: italic;
+}
