@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Julián Ramos Souza">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/cocinando.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Página de registro</title>
+</head>
+
+<body>
+    <header class="bg-gray py-3">
+        <div class="container d-flex align-items-center">
+            <img src="img/cocinando.png" alt="logo con sartén al fuego" class="me-3" style="height: 50px;">
+            <h1 class="text-white flex-grow-1">Fanpage de Karlos Arguiñano</h1>
+            <nav>
+                <a href="./index.html" class="btn btn-secondary me-2">Página principal</a>
+                <a href="./recetas.html" class="btn btn-secondary me-2">Recetas</a>
+                <a href="./registrarse.html" class="btn btn-dark">Registrarse</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h1>Registro de usuario</h1>
+        <hr>
+        <p>
+            Descubre recetas deliciosas, consejos culinarios y únete a una comunidad apasionada por la cocina. Regístrate para no perderte nada.
+        </p>
+
+        <form action="" method="post" class="row g-3">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre completo:</label>
+                <input type="text" name="nombre" id="nombre" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="usuario" class="form-label">Nombre de usuario:</label>
+                <input type="text" name="usuario" id="usuario" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="nacimiento" class="form-label">Fecha de nacimiento:</label>
+                <input type="date" name="nacimiento" id="nacimiento" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="correo" class="form-label">Correo electrónico:</label>
+                <input type="email" name="correo" id="correo" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="contraseña" class="form-label">Contraseña:</label>
+                <input type="password" name="contraseña" id="contraseña" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <label for="pais" class="form-label">País:</label>
+                <select id="pais" name="pais" class="form-select" required>
+                    <option value="" disabled selected>Selecciona tu país</option>
+                    <option value="es">España</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="pr">Portugal</option>
+                    <option value="fr">Francia</option>
+                    <option value="otros">Otro</option>
+                </select>
+            </div>
+
+            <div class="col-12">
+                <div class="form-check">
+                    <input type="checkbox" name="notif" id="notif" class="form-check-input">
+                    <label for="notif" class="form-check-label">Recibir notificaciones y novedades sobre Karlos Arguiñano</label>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-success w-100">Crear cuenta de usuario</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Más información</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://es.wikipedia.org/wiki/Karlos_Argui%C3%B1ano" class="text-white text-decoration-none">Wikipedia</a></li>
+                        <li><a href="https://www.antena3.com/programas/karlos-arguinano/" class="text-white text-decoration-none">Cocina abierta</a></li>
+                        <li><a href="https://www.hogarmania.com/cocina/cocineros/karlos-arguinano/" class="text-white text-decoration-none">Todas sus recetas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contacto</h5>
+                    <p>Correo: <a href="mailto:julianrasou03@gmail.com" class="text-white">julianrasou03@gmail.com</a></p>
+                    <p>Autor de la página: Julián Ramos Souza</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
