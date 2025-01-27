@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <disco>
+        <nombre>A El Disco</nombre>
+        <grupo>El Grupo</grupo>
+        <publicacion>1999</publicacion>
+        <genero>El Género</genero>
+        <localizacion>0</localizacion>
+        <prestado>false</prestado>
+        <caratula>imagen.png</caratula>
+    </disco>
+    <disco>
+        <nombre>B El Disco2</nombre>
+        <grupo>El Grupo 2</grupo>
+        <publicacion>2000</publicacion>
+        <genero>El Género 2</genero>
+        <localizacion>0</localizacion>
+        <prestado>false</prestado>
+        <caratula>imagen.png</caratula>
+    </disco>
+    <disco>
+        <nombre>D El Disco 3</nombre>
+        <grupo>El Grupo 3</grupo>
+        <publicacion>2001</publicacion>
+        <genero>El Género 3</genero>
+        <localizacion>0</localizacion>
+        <prestado>false</prestado>
+        <caratula>imagen.png</caratula>
+    </disco>
+    <disco>
+        <nombre>C El Disco 4</nombre>
+        <grupo>El Grupo 4</grupo>
+        <publicacion>2002</publicacion>
+        <genero>El Género 4</genero>
+        <localizacion>0</localizacion>
+        <prestado>false</prestado>
+        <caratula>imagen.png</caratula>
+    </disco>
+</catalogo>

@@ -1,0 +1,14 @@
+[
+    {
+        "texto": "Estudiar mucho",
+        "completada": false
+    },
+    {
+        "texto": "Descansar mucho",
+        "completada": true
+    },
+    {
+        "texto": "Hacer ejercicio",
+        "completada": false
+    }
+]
