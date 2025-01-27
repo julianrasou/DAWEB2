@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <script src="ejercicio6.js" defer></script>
+    <style>
+        #tabla td {
+            width: 150px;
+            height: 150px; 
+            text-align: center;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+        #tabla img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            display: none; /* Ocultar imágenes inicialmente */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="bienvenida" style="text-align: center; margin: 20px;"></h1>
+    <p id="contador" style="text-align: center; margin: 20px;"></p>
+    <table id="tabla" border="1px" style="background-color: beige; margin: auto;">
+        <tr height="150px">
+            <td width="150px"></td>
+            <td width="150px"></td>
+            <td width="150px"></td>
+            <td width="150px"></td>
+        </tr>
+        <tr height="150px">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr height="150px">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

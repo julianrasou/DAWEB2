@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 20px;
+    padding: 0;
+}
+.pilot {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 35%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.highlight {
+    background-color: rgba(119, 152, 202, 0.781);
+    font-weight: bold;
+}
+
