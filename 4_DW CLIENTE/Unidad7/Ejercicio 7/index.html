@@ -1,13 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="ejercicio7.js"></script>
+    <title>Documento</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="ejercicio7.js" defer> </script>
 </head>
 <body>
-    <h1>Lista de pilotos:</h1>
-    <div id="pilotos"></div>
+    <main>
+        <h1>Pilotos de Fórmula 1</h1>
+
+        <div>
+            <label for="sort">Ordenar por:</label>
+            <select id="sort">
+                <option value="nombre-asc">Nombre Ascendente</option>
+                <option value="nombre-desc">Nombre Descendente</option>
+                <option value="equipo-asc">Equipo Ascendente</option>
+                <option value="equipo-desc">Equipo Descendente</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="filter">Filtrar por nacionalidad:</label>
+            <select id="filter">
+                <option value="todos">Todos</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="Países Bajos">Países Bajos</option>
+                <option value="Mónaco">Mónaco</option>
+                <option value="España">España</option>
+            </select>
+        </div>
+
+        <div id="pilots-list"></div>
+
+        <div id="pagination">
+            <button id="prev">Anterior</button>
+            <button id="next">Siguiente</button>
+            <button id="all">Ver todos</button>
+        </div>
+    </main>
 </body>
 </html>

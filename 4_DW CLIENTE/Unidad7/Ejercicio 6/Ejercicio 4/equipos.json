@@ -1,0 +1,41 @@
+[
+    {
+        "nombre": "Cambre",
+        "pJugados": 4,
+        "pGanados": 3,
+        "pPerdidos": 0,
+        "pEmpatados": 1
+    },
+
+    {
+        "nombre": "Lema",
+        "pJugados": 4,
+        "pGanados": 4,
+        "pPerdidos": 0,
+        "pEmpatados": 0
+    },
+
+    {
+        "nombre": "Barcala",
+        "pJugados": 4,
+        "pGanados": 3,
+        "pPerdidos": 0,
+        "pEmpatados": 1
+    },
+
+    {
+        "nombre": "Ferrol",
+        "pJugados": 4,
+        "pGanados": 0,
+        "pPerdidos": 3,
+        "pEmpatados": 1 
+    },
+    
+    {
+        "nombre": "Sigrás",
+        "pJugados": 4,
+        "pGanados": 0,
+        "pPerdidos": 3,
+        "pEmpatados": 1
+    }
+]

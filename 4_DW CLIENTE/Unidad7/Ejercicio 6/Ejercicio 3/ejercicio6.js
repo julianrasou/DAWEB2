@@ -16,13 +16,12 @@ document.getElementById("contador").innerHTML = `Has ingresado a la página ${co
 const celdas = Array.from(document.querySelectorAll("#tabla td"));
 let imagenes = [];
 
-// Obtén las imágenes desde la API REST usando XMLHttpRequest
-const xhr = new XMLHttpRequest();
-xhr.open("GET", "https://randomuser.me/api/?results=6&format=XML", true);
-xhr.onload = function () {
-  if (xhr.status === 200) {
+// Obtén las imágenes desde la API REST
+fetch("https://randomuser.me/api/?results=6&format=XML")
+  .then(response => response.text())
+  .then(data => {
     const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(xhr.responseText, "text/xml");
+    const xmlDoc = parser.parseFromString(data, "text/xml");
     const results = xmlDoc.getElementsByTagName("picture");
 
     for (let i = 0; i < results.length; i++) {
@@ -31,14 +30,8 @@ xhr.onload = function () {
     }
 
     iniciarJuego();
-  } else {
-    console.error("Error al obtener las imágenes:", xhr.statusText);
-  }
-};
-xhr.onerror = function () {
-  console.error("Error de red al intentar obtener las imágenes.");
-};
-xhr.send();
+  })
+  .catch(error => console.error("Error al obtener las imágenes:", error));
 
 function iniciarJuego() {
   const imagenesDuplicadas = [...imagenes, ...imagenes];
