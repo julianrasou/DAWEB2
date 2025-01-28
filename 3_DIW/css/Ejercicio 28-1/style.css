@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.caja {
+    float: left;
+    display: block;
+    height: 200px;
+    border: 5px solid lightblue;
+    padding: 40px;
+    color: white;
+}
+.morado {
+    background-color: #bb00bb;
+}
+.negro {
+    background-color: #252525;
+}
+.azul {
+    background-color: #6499fc;
+}
+.rosa {
+    background-color: #ff0064;
+}
+.treintaytres {
+    width: 33.33%;
+}
+.cien {
+    width: 100%;
+}
+.fila {
+    clear: both;
+}
