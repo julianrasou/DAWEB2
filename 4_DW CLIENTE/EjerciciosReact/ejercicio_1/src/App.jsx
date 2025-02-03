@@ -1,5 +1,7 @@
-function App() {
+import Cliente from "./Components/Cliente"
 
+function App() {
+    
     return (
         <>
             
