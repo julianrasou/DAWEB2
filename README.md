@@ -1,3 +1,3 @@
 # DAWEB2
 
-repo del curso odaw2a 2024-25
+Repositorio del curso odaw2a 2024-25
