@@ -16,6 +16,7 @@ function CuotaInit (props) {
                 value={cuota} 
                 onChange={manejarCuota} 
                 placeholder="Ingresa una cuota"
+                className="input"
             />
 
             <Cuota clientes={props.clientes} cuota={cuota}/>

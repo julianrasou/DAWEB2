@@ -2,15 +2,14 @@ import Cabecera from "./Cabecera"
 import Cliente from "./Cliente"
 
 function Localidad (props) {
-
     
     let clientes = props.clientes;
 
-    let localidad = prompt("Localidades disponibles: Santander, Castro, Zamora, Bilbao");
+    let localidad = props.localidad;
 
     let clientes2 = [];
     clientes.forEach(cliente => {
-        if (cliente.localidad === localidad) {
+        if (cliente.localidad.toLowerCase().includes(localidad.trim().toLowerCase())) {
             clientes2.push(cliente);
         }
     });

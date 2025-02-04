@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Todos from "./Components/Todos";
-import Localidad from "./Components/Localidad";
+import LocalidadInit from "./Components/LocalidadInit";
 import CuotaInit from "./Components/CuotaInit";
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
             
 
             {seccionActiva === "mostrarTodos" && <Todos clientes={clientes}/>}
-            {seccionActiva === "mostrarLocalidad" && <Localidad clientes={clientes}/>}
+            {seccionActiva === "mostrarLocalidad" && <LocalidadInit clientes={clientes}/>}
             {seccionActiva === "mostrarCuota" && <CuotaInit clientes={clientes}/>}
         </>
     )
