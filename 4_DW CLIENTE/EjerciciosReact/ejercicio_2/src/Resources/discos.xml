@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo>
+    <disco>
+        <nombre>20 y Serenos</nombre>
+        <grupo>Porretas</grupo>
+        <publicacion>2011</publicacion>
+        <genero>Rock Urbano</genero>
+        <localizacion>1</localizacion>
+        <prestado>false</prestado>
+        <caratula>20_y_serenos.png</caratula>
+    </disco>
+    <disco>
+        <nombre>No Hay Tregua</nombre>
+        <grupo>Barricada</grupo>
+        <publicacion>1986</publicacion>
+        <genero>Rock</genero>
+        <localizacion>2</localizacion>
+        <prestado>false</prestado>
+        <caratula>no_hay_tregua.png</caratula>
+    </disco>
+    <disco>
+        <nombre>A Tu Salud</nombre>
+        <grupo>Porretas</grupo>
+        <publicacion>1998</publicacion>
+        <genero>Rock Urbano</genero>
+        <localizacion>3</localizacion>
+        <prestado>true</prestado>
+        <caratula>a_tu_salud.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Algazara</nombre>
+        <grupo>Reincidentes</grupo>
+        <publicacion>1998</publicacion>
+        <genero>Punk Rock</genero>
+        <localizacion>4</localizacion>
+        <prestado>false</prestado>
+        <caratula>algazara.png</caratula>
+    </disco>
+    <disco>
+        <nombre>La Tierra Está Sorda</nombre>
+        <grupo>Barricada</grupo>
+        <publicacion>2009</publicacion>
+        <genero>Rock</genero>
+        <localizacion>5</localizacion>
+        <prestado>true</prestado>
+        <caratula>la_tierra_esta_sorda.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Ni Un Paso Atrás</nombre>
+        <grupo>Reincidentes</grupo>
+        <publicacion>2004</publicacion>
+        <genero>Punk Rock</genero>
+        <localizacion>6</localizacion>
+        <prestado>false</prestado>
+        <caratula>ni_un_paso_atras.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Balas Blancas</nombre>
+        <grupo>Barricada</grupo>
+        <publicacion>1992</publicacion>
+        <genero>Rock</genero>
+        <localizacion>7</localizacion>
+        <prestado>false</prestado>
+        <caratula>balas_blancas.png</caratula>
+    </disco>
+</catalogo>
