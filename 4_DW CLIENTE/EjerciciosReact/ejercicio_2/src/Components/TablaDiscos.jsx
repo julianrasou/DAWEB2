@@ -3,6 +3,8 @@ import Disco from "./Disco";
 
 function TablaDiscos( {discos} ) {
 
+    const listaDiscos = Array.isArray(discos) ? discos : [];
+
     return (
 
         <table>
@@ -11,7 +13,7 @@ function TablaDiscos( {discos} ) {
             </thead>
             <tbody>
                 {
-                    discos.map(disco => (
+                    listaDiscos.map(disco => (
                         <Disco disco={disco}/>
                     ))
                 }

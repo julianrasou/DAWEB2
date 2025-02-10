@@ -1,14 +1,26 @@
 import TablaDiscos from "./Components/TablaDiscos"
-import Disco from "./Classes/Disco";
+import fetchDiscos from "./Classes/fetchDiscos";
+import { useEffect, useState } from "react";
 
 function App() {
 
-    let disco = new Disco("pepe", "pepe", "pepe", "pepe", "pepe", true, "pepe");
-    let disco2 = new Disco("pepa", "pepe", "pepe", "pepe", "pepe", true, "pepe");
-    let disco3 = new Disco("pepo", "pepe", "pepe", "pepe", "pepe", true, "pepe");
+    const[discos, setDiscos] = useState([]);
 
-    let discos = [disco, disco2, disco3];
+    useEffect(() => {
+        
+        fetchDiscos().then(data => {
 
+            setDiscos(data);
+
+        }).catch(() => {
+
+            setDiscos([]);
+
+        });
+
+    }, []); 
+
+    console.log(discos);
     return (
         <>
 

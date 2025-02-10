@@ -10,7 +10,7 @@ body {
 }
 main {
     display: block;
-    width: 40%;
+    width: 60%;
     margin: auto;
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -23,8 +23,17 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
+thead tr {
+    line-height: 200%;
+    background-color: #cececd;
+}
+tbody tr {
+    line-height: 150%;
+}
+tbody tr:nth-child(even) {
+    background-color: #ebebeb;
+}
 table {
     width: 100%;
     text-align: center;
-    
 }

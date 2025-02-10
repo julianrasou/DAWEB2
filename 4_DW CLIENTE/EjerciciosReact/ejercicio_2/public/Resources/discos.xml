@@ -63,4 +63,67 @@
         <prestado>false</prestado>
         <caratula>balas_blancas.png</caratula>
     </disco>
+    <disco>
+        <nombre>Agila</nombre>
+        <grupo>Extremoduro</grupo>
+        <publicacion>1996</publicacion>
+        <genero>Punk Rock</genero>
+        <localizacion>8</localizacion>
+        <prestado>false</prestado>
+        <caratula>agila.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Deltoya</nombre>
+        <grupo>Extremoduro</grupo>
+        <publicacion>1992</publicacion>
+        <genero>Rock Transgresivo</genero>
+        <localizacion>9</localizacion>
+        <prestado>true</prestado>
+        <caratula>deltoya.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Yo, Minoría Absoluta</nombre>
+        <grupo>Extremoduro</grupo>
+        <publicacion>2002</publicacion>
+        <genero>Rock Transgresivo</genero>
+        <localizacion>10</localizacion>
+        <prestado>false</prestado>
+        <caratula>yo_minoria_absoluta.png</caratula>
+    </disco>
+    <disco>
+        <nombre>La Ley Innata</nombre>
+        <grupo>Extremoduro</grupo>
+        <publicacion>2008</publicacion>
+        <genero>Rock Transgresivo</genero>
+        <localizacion>11</localizacion>
+        <prestado>true</prestado>
+        <caratula>la_ley_innata.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Clásicos II</nombre>
+        <grupo>Porretas</grupo>
+        <publicacion>2017</publicacion>
+        <genero>Rock Urbano</genero>
+        <localizacion>12</localizacion>
+        <prestado>false</prestado>
+        <caratula>clasicos_ii.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Baladas pa un sordo</nombre>
+        <grupo>Porretas</grupo>
+        <publicacion>1997</publicacion>
+        <genero>Punk Rock</genero>
+        <localizacion>13</localizacion>
+        <prestado>true</prestado>
+        <caratula>baladas_pa_un_sordo.png</caratula>
+    </disco>
+    <disco>
+        <nombre>Cuando No Te Pones Falda</nombre>
+        <grupo>Sínkope</grupo>
+        <publicacion>2000</publicacion>
+        <genero>Rock Urbano</genero>
+        <localizacion>14</localizacion>
+        <prestado>false</prestado>
+        <caratula>cuando_no_te_pones_falda.png</caratula>
+    </disco>
 </catalogo>
