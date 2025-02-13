@@ -6,16 +6,16 @@ import { useEffect, useState } from "react";
 function App() {
 
     const [seccionActiva, setSeccion] = useState("normal");
-    const [rangoMin, setRangoMin] = useState("");
-    const [rangoMax, setRangoMax] = useState("");
+    const [rangoMin, setRangoMin] = useState(0);
+    const [rangoMax, setRangoMax] = useState(3000);
 
     const[discos, setDiscos] = useState([]);
 
     const CambiarRangoMin = (e) => {
-        setRangoMin(e.target.value);
+        setRangoMin(parseInt(e.target.value));
     };
     const CambiarRangoMax = (e) => {
-        setRangoMin(e.target.value);
+        setRangoMax(parseInt(e.target.value));
     };
 
     useEffect(() => {
@@ -52,9 +52,9 @@ function App() {
                 <input type="number" onChange={CambiarRangoMax} placeholder="max"/>
             </p>
 
-            {seccionActiva === "normal" && <TablaDiscos discos={lib.mostrar(discos, 1)}/>}
-            {seccionActiva === "reves" && <TablaDiscos discos={lib.mostrar(discos, 2)}/>}
-            {seccionActiva === "alfa" && <TablaDiscos discos={lib.mostrar(discos, 3)}/>}
+            {seccionActiva === "normal" && <TablaDiscos discos={lib.mostrar(discos, 1, rangoMin, rangoMax)}/>}
+            {seccionActiva === "reves" && <TablaDiscos discos={lib.mostrar(discos, 2, rangoMin, rangoMax)}/>}
+            {seccionActiva === "alfa" && <TablaDiscos discos={lib.mostrar(discos, 3, rangoMin, rangoMax)}/>}
             
             
         </>
