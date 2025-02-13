@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+		.circle {
+			background: rgba(191, 63, 116, 1);
+			width: 400px;
+			height: 400px;
+			border-radius: 200px;
+			margin: auto;
+            margin-top: 200px;
+			display: block;
+			transition: background 2s ease-in-out, transform 2s ease-in-out;
+		}
+
+		.circle:hover {
+			background: rgba(83, 180, 191, 1);
+			transform: scale(1.2);
+		}
+
+	</style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

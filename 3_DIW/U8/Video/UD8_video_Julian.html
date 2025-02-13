@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pato1 {
+            width: 500px;
+            height: 350px;
+        }
+        .pato2 {
+            width: 550px;
+            height: 400px;
+        }
+        .pato3 {
+            width: 400px;
+            height: 350px;
+        }
+        .video4 {
+            width: 300px;
+            height: 300px;
+        }
+		
+		
+        .video-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .video-container button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgb(0, 33, 95);
+            color: white;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .play {
+            font-weight: bold;
+        }
+
+        .pause::before {
+            content: '||';
+            font-weight: bold;
+        }
+
+        .play::before {
+            content: '▶';
+        }	
+
+    </style>
+</head>
+<body>
+    <video controls autoplay muted class="pato1">
+        <source src="pato.mp4" type="video/mp4">
+    </video><br>
+    <video controls autoplay muted loop class="pato2">
+        <source src="pato.mp4" type="video/mp4">
+    </video><br>
+    <video controls preload class="pato3">
+        <source src="pato.mp4" type="video/mp4">
+    </video><br>
+    <div class="video-container">
+        <video class="video4" id="video4" controls autoplay muted>
+            <source src="pato.mp4" type="video/mp4">
+        </video>
+        <br>
+        <button id="playPauseBtn" class="play"></button>
+    </div>
+    <script>
+        const video4 = document.getElementById('video4');
+        const playPauseBtn = document.getElementById('playPauseBtn');
+
+        playPauseBtn.addEventListener('click', () => {
+            if (video4.paused) {
+                video4.play();
+                playPauseBtn.classList.remove('play');
+                playPauseBtn.classList.add('pause');
+            } else {
+                video4.pause();
+                playPauseBtn.classList.remove('pause');
+                playPauseBtn.classList.add('play');
+            }
+        });
+    </script>
+
+</body>
+</html>

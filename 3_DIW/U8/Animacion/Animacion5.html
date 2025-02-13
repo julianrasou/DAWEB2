@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Rectángulo</title>
+    <style>
+        .rectangle {
+            width: 400px;
+            height: 300px;
+            background-color: blue;
+            transition: transform 2s, background-color 0s;
+            margin: 50px auto;
+        }
+
+        .rectangle:hover {
+            transform: scale(0.5); /* Disminuye el tamaño al 50% (200% de reducción) */
+            background-color: red; /* Cambio de color inmediato */
+        }
+    </style>
+</head>
+<body>
+    <div class="rectangle"></div>
+</body>
+</html>
