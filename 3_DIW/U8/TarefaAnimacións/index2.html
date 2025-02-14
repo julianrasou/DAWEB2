@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            height: 100vh;
+            background-color: gray;
+            display: none;
+            padding: 30px;
+
+        }
+        @keyframes abrir {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 20%;
+            }
+        }
+        .mostrar {
+            animation-duration: 1s;
+            animation-name: abrir;
+            animation-fill-mode: forwards;
+            display: block;
+        }
+        button {
+            height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="barra">
+        
+        <h1>Panel lateral</h1>
+        <ul>
+            <li>Opción</li>
+            <li>Opción</li>
+            <li>Opción</li>
+            <li>Opción</li>
+        </ul>
+
+    </div>
+    <button id="mostrar">Mostrar</button>
+    <script>
+        document.querySelector("#mostrar").addEventListener("click", mostrar);
+        function mostrar() {
+            document.querySelector("div").classList.toggle("mostrar")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .contenido {
+            text-align: center;
+            margin: auto;
+            opacity: 0;
+            animation-name: mostrar;
+            animation-delay: 10s;
+            animation-fill-mode: forwards;
+            animation-duration: 1s;
+        }
+        @keyframes mostrar {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        .carga {
+            height: 100vh;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.349);
+            animation-name: cargar;
+            animation-duration: 10s;
+        }
+
+        @keyframes cargar {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="carga">
+        <div class="contenido">
+            <h1>Todo listo para continuar!</h1>
+            <ul>
+                <li>Contenido de la página</li>
+                <li>Work In Progress</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

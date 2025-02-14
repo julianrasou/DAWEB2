@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Rara</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            text-align: center;
+        }
+
+        /*
+            Estilos para el div
+            Primera animación
+        */
+        div {
+            width: 100%;
+            height: 1.5em;
+            background-color: red;
+            animation-name: cargar;
+            animation-duration: 1s;
+            animation-iteration-count: 10;
+        }
+        @keyframes cargar {
+            0% {
+                width: 0%;
+                background-color: green;
+                height: 1.5em;
+            }
+            100% {
+                width: 100%;
+                background-color: red;
+                height: 1.5em;
+            }
+        }
+
+        /*
+            Estilos para el cuerpo
+            Segunda animación
+        */
+        body {
+            animation-name: parpadear;
+            animation-duration: 1s;
+            animation-delay: 10s;
+            animation-iteration-count: 10;
+        }
+        @keyframes parpadear {
+            0% {
+                background-color: white;
+            }
+            50% {
+                background-color: black;
+            }
+            100% {
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <h1>Adivina adivinanza, ¿Qué tiene el rey en la panza?</h1>
+</body>
+</html>

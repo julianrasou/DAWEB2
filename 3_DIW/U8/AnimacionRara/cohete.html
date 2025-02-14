@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Cohete</title>
+    <style>
+        * {
+            text-align: center;
+            display: flex;
+            align-items: center;
+        }
+        button {
+            background-color: blue;
+            border: 0;
+            border-radius: 3px;
+            width: 100px;
+            height: 33px;
+            color: white;
+        }
+        button:active {
+            background-color: red;
+        }
+
+        @keyframes despegar {
+            0% {
+                bottom: -100vh;
+            }
+            100% {
+                bottom: 100vh;
+            }
+        }
+        img {
+            animation-name: despegar;
+            bottom: -100vh;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="lanzar">Despegue</button>
+    <img src="cohete-espacial.png">
+</body>
+</html>
