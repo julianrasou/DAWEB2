@@ -1,6 +1,7 @@
 import TablaDiscos from "./Components/TablaDiscos"
 import fetchDiscos from "./Classes/fetchDiscos";
 import lib from "./lib/libreria";
+import Disco from "./Classes/Disco";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -32,6 +33,29 @@ function App() {
 
     }, []); 
 
+    function principio() {
+        let nombre = prompt("Nombre del disco:");
+        let grupo = prompt("Nombre del grupo:");
+        let publicacion = prompt("Fecha de publicacion:");
+        let genero = prompt("Género del disco:");
+        let local = prompt("Localización en la estantería:");
+
+        let disco = new Disco(nombre, grupo, publicacion, genero, local, false, "imagen.png");
+
+        setDiscos([disco, ...discos])
+
+    }
+    function final() {
+        let nombre = prompt("Nombre del disco:");
+        let grupo = prompt("Nombre del grupo:");
+        let publicacion = prompt("Fecha de publicacion:");
+        let genero = prompt("Género del disco:");
+        let local = prompt("Localización en la estantería:");
+
+        let disco = new Disco(nombre, grupo, publicacion, genero, local, false, "imagen.png");
+
+        setDiscos([...discos, disco])
+    }
     return (
         <>
             <p className="apartado">
@@ -56,7 +80,10 @@ function App() {
             {seccionActiva === "reves" && <TablaDiscos discos={lib.mostrar(discos, 2, rangoMin, rangoMax)}/>}
             {seccionActiva === "alfa" && <TablaDiscos discos={lib.mostrar(discos, 3, rangoMin, rangoMax)}/>}
             
-            
+            <div className="botones">
+                <button onClick={principio}>Añadir al principio</button>
+                <button onClick={final}>Añadir al final</button>
+            </div>
         </>
     );
 }
