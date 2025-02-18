@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Flecha</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .flecha {
+            font-size: 50px;
+            color: red;
+            cursor: pointer;
+            position: absolute;
+            transition: transform 1s ease-in-out;
+        }
+
+        .animar {
+            animation: moverFlecha 1.5s ease-in-out;
+        }
+
+        @keyframes moverFlecha {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-100vh); opacity: 0; }
+            51% { transform: translateY(100vh); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="flecha" class="flecha">⬆️</div>
+
+    <script>
+        document.getElementById('flecha').addEventListener('click', function() {
+            this.classList.add('animar');
+
+            setTimeout(() => {
+                this.classList.remove('animar');
+            }, 1500); // Restablecer la animación después de 1.5s
+        });
+    </script>
+
+</body>
+</html>
