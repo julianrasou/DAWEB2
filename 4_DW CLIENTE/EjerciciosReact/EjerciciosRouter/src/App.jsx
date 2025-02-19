@@ -1,5 +1,6 @@
-import './App.css'
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import E1 from "./e1/Indice";
+import E2 from "./e2/Indice";
 
 
 function App() {
@@ -8,12 +9,12 @@ function App() {
     <>
       <BrowserRouter>
         <nav>
-          <Link to="/e1">Ejercicio 1</Link>
-          <Link to="/e2">Ejercicio 2</Link>
+          <Link to="/ejercicio1">Ejercicio 1</Link>
+          <Link to="/ejercicio2">Ejercicio 2</Link>
         </nav>
         <Routes>
-          <Route path="/e1" element={<e1/>}/>
-          <Route path="/e2" element={<e2/>}/>
+          <Route path="/ejercicio1" element={<E1/>}/>
+          <Route path="/ejercicio2" element={<E2/>}/>
         </Routes>
       </BrowserRouter>
     </>
