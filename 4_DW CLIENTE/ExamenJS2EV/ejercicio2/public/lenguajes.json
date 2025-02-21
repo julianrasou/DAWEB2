@@ -1,0 +1,90 @@
+{
+    "lenguajes_cliente": {
+      "lista": [
+        {
+          "lenguaje": {
+            "nombre": "JavaScript",
+            "creador": "Brendan Eich",
+            "year": 1995,
+            "uso": "Web, servidores, apps móviles"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "TypeScript",
+            "creador": "Microsoft",
+            "year": 2012,
+            "uso": "Aplicaciones web escalables"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "Dart",
+            "creador": "Google",
+            "year": 2011,
+            "uso": "Aplicaciones web y móviles con Flutter"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "Elm",
+            "creador": "Evan Czaplicki",
+            "year": 2012,
+            "uso": "Desarrollo web funcional"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "CoffeeScript",
+            "creador": "Jeremy Ashkenas",
+            "year": 2009,
+            "uso": "Scripting web más legible"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "ActionScript",
+            "creador": "Adobe",
+            "year": 1998,
+            "uso": "Animaciones y juegos Flash"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "VBScript",
+            "creador": "Microsoft",
+            "year": 1996,
+            "uso": "Scripting en Internet Explorer"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "JScript",
+            "creador": "Microsoft",
+            "year": 1996,
+            "uso": "Compatibilidad con JavaScript en IE"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "Haxe",
+            "creador": "Nicolas Cannasse",
+            "year": 2005,
+            "uso": "Desarrollo de juegos y aplicaciones web"
+          }
+        },
+        {
+          "lenguaje": {
+            "nombre": "PureScript",
+            "creador": "Phil Freeman",
+            "year": 2013,
+            "uso": "Programación funcional en la web"
+          }
+        }
+      ],
+      "informacion": {
+        "total_lenguajes": 10,
+        "descripcion": "Lista de lenguajes de programación del lado cliente usados en el desarrollo web y aplicaciones."
+      }
+    }
+  }  

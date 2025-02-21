@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Julián Ramos Souza">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/cocinando.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Página de registro</title>
+
+    </head>
+
+    <body>
+        
+        <header>
+            <div>
+                <img src="img/cocinando.png" alt="logo con sartén al fuego">
+                <span class="titulo">Fanpage de Karlos Arguiñano</span>
+                <a href="./index.html">Página principal</a>
+                <a href="./recetas.html">Recetas</a>
+                <a class="seleccionado" href="./registrarse.html">Registrarse</a>
+            </div>
+        </header>
+
+        <main>
+            <h1>
+                Registro de usuario
+            </h1><hr>
+            <p>
+                Descubre recetas deliciosas, consejos culinarios y únete a una comunidad apasionada por la cocina. Regístrate para no perderte nada.
+            </p>
+
+            <form action="" method="post">
+                <p>
+                    <label for="nombre">Nombre completo: </label>
+                    <input type="text" name="nombre" id="nombre" required>
+                </p>
+                <p>
+                    <label for="usuario">Nombre de usuario: </label>
+                    <input type="text" name="usuario" id="usuario" required>
+                </p>
+                <p>
+                    <label for="nacimiento">Fecha de nacimiento: </label>
+                    <input type="date" name="nacimiento" id="nacimiento" required>
+                </p>
+                <p>
+                    <label for="correo">Correo electrónico: </label>
+                    <input type="email" name="correo" id="correo" required>
+                </p>
+                <p>
+                    <label for="contraseña">Contraseña: </label>
+                    <input type="password" name="contraseña" id="contraseña" required>
+                </p>
+                <p>
+                    <label for="pais">País: </label>
+                    <select id="pais" name="pais" required>
+                        <option value="" disabled selected>Selecciona tu país</option>
+                        <option value="es">España</option>
+                        <option value="us">Estados Unidos</option>
+                        <option value="pr">Portugal</option>
+                        <option value="fr">Francia</option>
+                        <option value="otros">Otro</option>
+                    </select>
+                </p>
+                <hr>
+                <p>
+                    <input type="checkbox" name="notif" id="notif">
+                    <label for="notif">Recibir notificaciones y novedades sobre Karlos Arguiñano</label>
+                </p>
+                <p>
+                    <button type="submit">Crear cuenta de usuario</button>
+                </p>
+            </form>
+
+        </main>
+
+        <footer>
+            <table>
+                <tr>
+                    <td>
+                        Más información: 
+                    </td>
+                    <td>
+                        <a href="https://es.wikipedia.org/wiki/Karlos_Argui%C3%B1ano">Página de Karlos Arguiñano en la Wikipedia</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <a href="https://www.antena3.com/programas/karlos-arguinano/">Cocina abierta de Karlos Arguiñano</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <a href="https://www.hogarmania.com/cocina/cocineros/karlos-arguinano/">Todas sus recetas</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Correo electrónico: </td>
+                    <td>
+                        <a href="mailto:julianrasou03@gmail.com">julianrasou03@gmail.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Autor de la página: </td>
+                    <td>
+                        Julián Ramos Souza
+                    </td>
+                </tr>
+            </table>
+        </footer>
+
+    </body>
+
+</html>

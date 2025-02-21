@@ -1,0 +1,49 @@
+/*
+    Mis estilos para que se vea bonito
+*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(253, 242, 227);
+}
+
+main {
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+div#resultado {
+    margin-top: 50px;
+}
+
+
+/*
+    Estilos propios del ejercicio
+*/
+.card {
+    padding: 2em;
+    margin: 2cqmin;
+    color: white;
+    background-color: #000000;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.5);
+    background-color: #033215;
+}
