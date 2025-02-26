@@ -71,6 +71,22 @@ header a {
     margin-left: 10px;
 }
 
+#audio {
+    position: absolute;
+    right: 20px;
+}
+#audio span {
+    margin-right: 10px;
+    color: rgb(209, 209, 209);
+    font-size: 140%;
+}
+#play, #pause {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
 .seleccionado {
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6);
 }
@@ -216,7 +232,7 @@ label {
     font-weight: bold;
 }
 
-input, select, button {
+form input, form select, form button {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
