@@ -267,8 +267,28 @@ button {
     color: white;
     font-weight: bold;
     border: none;
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #58a639;
+}
+
+.cargando {
+    height: 0;
+    width: 0;
+    border-radius: 10px;
+    background: rgb(107,0,0);
+    background: linear-gradient(17deg, rgba(107,0,0,1) 0%, rgba(9,66,121,1) 44%, rgba(12,74,117,1) 46%, rgba(0,196,19,1) 100%);
+}
+
+@keyframes animacion {
+    0% { width: 0%; height: 20px; }
+    30% { width: 30%; height: 20px; }
+    90% { width: 100%; height: 20px; }
+    100% { width: 100%; height: 20px; }
+}
+
+.animacion {
+    animation: animacion 5s ease-in-out;
 }
