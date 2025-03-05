@@ -56,7 +56,7 @@
             <hr>
 
             <div class="contenedor-tarjetas">
-                <div class="tarjeta">
+                <div class="tarjeta" onclick="abrirDialogo('dialog-merluza')">
                     <a target="_blank" href="https://www.hogarmania.com/cocina/recetas/pescados-mariscos/merluza-con-almejas-y-alcachofas.html">
                         <div class="fondo-tarjeta-merluza fondo-tarjeta"></div>
                     </a>
@@ -72,7 +72,7 @@
                     </div>
                     
                 </div>
-                <div class="tarjeta">
+                <div class="tarjeta" onclick="abrirDialogo('dialog-chuleta')">
                     <a target="_blank" href="https://www.hogarmania.com/cocina/recetas/carnes/chuleta-parrilla-38518.html">
                         <div class="fondo-tarjeta-chuletas fondo-tarjeta"></div>
                     </a>
@@ -88,6 +88,32 @@
                     
                 </div>
             </div>
+            <!-- Dialogo Merluza -->
+            <dialog id="dialog-merluza">
+                <h2>Merluza con almejas y alcachofas</h2>
+                <p>Unha deliciosa receita explicada por Karlos Arguiñano.</p>
+                <a href="https://www.hogarmania.com/cocina/recetas/pescados-mariscos/merluza-con-almejas-y-alcachofas.html" target="_blank">Ver receta completa</a>
+                <button onclick="cerrarDialogo('dialog-merluza')">Pechar</button>
+            </dialog>
+            <!-- Dialogo Chuleta -->
+            <dialog id="dialog-chuleta">
+                <h2>Chuleta a la parrilla</h2>
+                <p>Un clásico da cociña que nunca falla.</p>
+                <a href="https://www.hogarmania.com/cocina/recetas/carnes/chuleta-parrilla-38518.html" target="_blank">Ver receta completa</a>
+                <button onclick="cerrarDialogo('dialog-chuleta')">Pechar</button>
+            </dialog>
+
+            <!-- JavaScript -->
+            <script>
+                function abrirDialogo(id) {
+                    document.getElementById(id).showModal();
+                }
+
+                function cerrarDialogo(id) {
+                    document.getElementById(id).close();
+                }
+            </script>
+            
             <br><br>
             <div class="contenedor-tarjetas">
 
