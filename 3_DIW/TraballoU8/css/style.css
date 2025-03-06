@@ -148,10 +148,12 @@ li::before {
 }
 
 #imagen-index { /* Imagen de Arguiñano para el index */
-    background-image: url(../img/karlos.jpg);
+    background-image: url(../Videos/karlos.gif);
     background-size: cover;
-    background-position: top;
+    background-position: center;
     height: 400px;
+    margin: auto;
+    width: 500px;
 }
 
 /* 
