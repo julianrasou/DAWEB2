@@ -1,0 +1,37 @@
+[
+    {
+        "Nombre": "Barcelona",
+        "PartidosJugados": 20,
+        "PartidosGanados": 15,
+        "PartidosPerdidos": 3,
+        "PartidosEmpatados": 2
+    },
+    {
+        "Nombre": "Real Madrid",
+        "PartidosJugados": 20,
+        "PartidosGanados": 14,
+        "PartidosPerdidos": 4,
+        "PartidosEmpatados": 2
+    },
+    {
+        "Nombre": "Atlético de Madrid",
+        "PartidosJugados": 20,
+        "PartidosGanados": 12,
+        "PartidosPerdidos": 5,
+        "PartidosEmpatados": 3
+    },
+    {
+        "Nombre": "Sevilla",
+        "PartidosJugados": 20,
+        "PartidosGanados": 10,
+        "PartidosPerdidos": 6,
+        "PartidosEmpatados": 4
+    },
+    {
+        "Nombre": "Valencia",
+        "PartidosJugados": 20,
+        "PartidosGanados": 8,
+        "PartidosPerdidos": 7,
+        "PartidosEmpatados": 5
+    }
+]

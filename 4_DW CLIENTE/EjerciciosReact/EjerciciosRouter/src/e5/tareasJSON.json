@@ -1,0 +1,14 @@
+[
+    { 
+        "texto": "Terminar tarea react a tiempo",
+        "realizado": true 
+    },
+    { 
+        "texto": "Entregar la tarea", 
+        "realizado": true 
+    },
+    { 
+        "texto": "Avisar a Fernando",
+        "realizado": true 
+    }
+]

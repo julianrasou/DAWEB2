@@ -118,3 +118,12 @@ h1 {
   margin-left: 5px;
   width: 6em;
 }
+
+.tareaTexto {
+  text-decoration: none;
+}
+
+.tareaRealizada {
+  text-decoration: line-through;
+  color: red;
+}
