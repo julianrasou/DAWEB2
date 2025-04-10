@@ -11,6 +11,13 @@ function App() {
 
   return (
     <>
+    // Ejercicio 1: Crear un menú de navegación utilizando React Router.
+    // Ejercicio 2: Crear una página de inicio y una página de contacto.
+    // Ejercicio 3: Crear una página de productos y una página de detalles del producto.
+    // Ejercicio 4: Crear una página de carrito de compras.
+    // Ejercicio 5: Crear una página de perfil de usuario.
+    // Ejercicio 7: Crear una página de administración.
+    // Ejercicio 8: Crear una página de inicio de sesión.
       <BrowserRouter>
         <nav>
           <Link to="/ejercicio1">Ejercicio 1</Link>
@@ -19,6 +26,8 @@ function App() {
           <Link to="/ejercicio4">Ejercicio 4</Link>
           <Link to="/ejercicio5">Ejercicio 5</Link>
           <Link to="/ejercicio7">Ejercicio 7</Link>
+          // ejercicio 8: Crear una página de inicio de sesión. 
+          <Link to="/ejercicio8">Ejercicio 8</Link>
         </nav>
         <Routes>
           <Route path="/ejercicio1" element={<E1/>}/>
