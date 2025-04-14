@@ -33,5 +33,12 @@
         "PartidosGanados": 8,
         "PartidosPerdidos": 7,
         "PartidosEmpatados": 5
+    },
+    {
+        "Nombre": "León",
+        "PartidosJugados": 20,
+        "PartidosGanados": 8,
+        "PartidosPerdidos": 7,
+        "PartidosEmpatados": 5
     }
 ]
